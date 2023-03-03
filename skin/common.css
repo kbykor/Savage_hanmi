@@ -1,45 +1,5 @@
 @charset "utf-8";
 
-/* 기본 */
-@font-face {
-  font-family: 'NanumBarunGothic';
-  font-style: normal;
-  font-weight: 300, 400, 700;
-  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
-  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
- }
-
- @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
-
- :root{
-  --main-color: #ED1C24; /*한미레드*/
-  --ppt-color: #AD1515; /*ppt레드*/
-
-  --f-color01: #fff;
-  --f-color02: #000;
-  --f-color03: #333;
-
-  --f-size01: 0.75rem; /*12px*/
-  --f-size02: 1rem; /*16px*/
-  --f-size03: 1.5rem; /*24px*/
-  --f-size04: 2rem; /*32px*/
-  --f-size05: 3rem; /*48px*/
-  --f-size06: 4rem; /*64px*/
-
-  --bg-color01: #fff;
-  --bg-color02: #000;
-  --bg-color03: #333;
- }
-
-body{
-  font-family: 'NanumBarunGothic', 'NanumSquare', '맑은고딕', arial, sans-serif;
-}
-
-* {margin:0; padding:0; box-sizing: border-box;}
-
-ul, li, ol {list-style: none;}
-
-
 /* 헤더 */
 header {}
 /* 푸터 */
