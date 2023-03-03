@@ -1,0 +1,15 @@
+.m_slide{
+  height:100vh;
+}
+
+.ms_box{
+  display: flex;
+}
+
+.ms_box > li{
+  width:1920px;
+}
+
+.ms_box > li img{
+  width:1920px;
+}
