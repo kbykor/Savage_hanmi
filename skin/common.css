@@ -3,4 +3,50 @@
 /* 헤더 */
 header {}
 /* 푸터 */
-footer {}
+a{
+  text-decoration: none;
+  color: #333;
+}
+
+footer {
+  width: 100%;
+}
+.f_top{
+  position: relative;
+  width: 1200px;
+  height: 80px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.f_left{
+  display: flex ;
+}
+.f_left h1 a img{
+  width: 110px;
+  height: 50px;
+  margin-right: 12px;
+  display: inline-block;
+  object-fit: fill;
+}
+.f_nav_ul{
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+}
+.f_nav_ul li{
+  padding: 12px;
+}
+.f_nav_ul li::after{
+  width: 1px; height: 15px;
+  background: #ccc;
+  content: '';
+  display: inline-block;
+}
+.f_nav_ul li:nth-child(2){
+  color: var(--main-color);
+}
+.f_right{
+  width: 40%;
+}
