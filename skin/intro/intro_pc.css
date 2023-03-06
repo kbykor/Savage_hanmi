@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body{
-  background: url(..);
+  background: url(../../images/intro_bg.png);
 }
 header{
   width: 100%;
@@ -48,7 +48,7 @@ header{
   font-size: 120px;
   text-transform: uppercase;
   color: rgba(49, 27, 25, 0.1);
-  line-height: 300px;
+  line-height: 220px;
 }
 .ceo_ms{
   position: absolute;
@@ -88,16 +88,20 @@ header{
 }
 .info_img{
   float: left;
-  margin-left: 200px;
+  margin-left: 400px;
   box-shadow: 10px 20px 50px 5px rgba(0, 0, 0, 0.3);  
 }
 .info_img img{
   display: inline-block;
+  width: 400px;
+  vertical-align: top;
 }
 .info_txt{
+  width: 600px;
   float:right;
-  margin: 450px 100px 0px 0px ;
+  margin: 300px 400px 0px 0px ;
   padding: 0px 20px 50px 20px;
+  background: #fff;
   box-shadow: 10px 20px 50px 5px rgba(0, 0, 0, 0.3);
 }
 .info_txt h2{
@@ -108,11 +112,11 @@ header{
   top: -70px;
 }
 .info_txt h3{
-  font-size: var(--f-size05);
+  font-size: var(--f-size04);
   padding-bottom: 50px;
 }
 .info_txt p{
-  font-size: var(--f-size03);
+  font-size: var(--f-size02);
   padding-bottom: 50px;
   color: var(--f-color03);
   letter-spacing: 0.05rem;
@@ -120,7 +124,7 @@ header{
 .info_txt p span{
   color: var(--main-color);
   font-weight: bold;
-  font-size: var(--f-size04);
+  font-size: var(--f-size03);
 }
 .info_txt a{
   padding: 10px 50px;
