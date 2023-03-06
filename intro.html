@@ -28,7 +28,7 @@ tmnu.click(function(){
   $(this).addClass('act').parent().siblings().find('a').removeClass('act');
 
   //2. 콘텐츠 숨기거나 나타내기
-  $(this).next().show().parent().siblings().find('div').hide();
+  $(this).next().show().parent().siblings().find('div.con').hide();
 
   return false;//함수(이벤트) 종료
 });

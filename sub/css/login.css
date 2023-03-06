@@ -72,13 +72,19 @@ input[type=email], input[type=password]{
   content: "";
 }
 
+#login form fieldset ul.ul_login li a{
+  font-size: var(--f-size02);
+  color: var(--f-color03);
+}
+
 input[type=button]{
   width: 500px;
   height: 60px;
   background-color: var(--bg-color02);
   color: var(--f-color01);
-  font-size: var(--f-size03);
-  margin: 20px auto;
+  font-size: var(--f-size02);
+  font-weight: bold;
+  margin: 50px auto 100px auto;
   display: block;
   cursor: pointer;
 }
