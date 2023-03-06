@@ -1,5 +1,6 @@
 .m_slide{
   height:100vh;
+  position:relative;
 }
 
 .ms_box{
@@ -8,8 +9,75 @@
 
 .ms_box > li{
   width:1920px;
+  position:relative;
 }
 
 .ms_box > li img{
   width:1920px;
+}
+
+.ms_box > li > span{
+  position: absolute;
+  left: 23px;
+  top: 386px;
+}
+.ms_box > li:nth-child(2) > span{
+  top: 368px;
+}
+
+.ms_subtitle{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  margin:0px 0px 15px 0px;
+}
+
+.ms_box > li > span > h3{
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 37px;
+}
+
+.ms_box > li > span > p{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 50px;
+}
+
+.ms_gauge{
+  position: absolute;
+  width: 1920px;
+  height: 1px;
+  left: 0px;
+  top: 460px;
+  background: #fff;
+}
+
+.ms_arrow{
+  position: absolute;
+  width: 192px;
+  height: 1px;
+  left: 0px;
+  top: 460px;
+  background: var(--main-color);
+}
+
+.ms_btn{
+  position: absolute;
+  top: 480px;
+  right:120px;
+}
+
+.ms_btn > span{
+  padding:1px 10px;
+  background: #9f9f9f;
+  border-radius: 50%;
+  margin:0px 5px;
+}
+
+.ms_btn > i.fas{
+  margin:0px 5px;
+  font-size: 24px;
+  transform: translateY(5px);
 }
