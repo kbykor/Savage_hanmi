@@ -16,28 +16,8 @@
   <link rel="stylesheet" href="./skin/intro/intro_pc.css" type="text/css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script>
-        $(function(){
+  <script src="./skin/intro/intro.js"></script>
 
-//1. 변수선언
-const tmnu = $('.tab_map li');
-// $('.con:first-of-type').show().parent().siblings().find('.con').hide(); // 첫번째 con 요소 보이기
-
-//2. 클릭이벤트
-tmnu.click(function(){
-  //1. 메뉴서식이 변경
-  $(this).addClass('act').siblings().removeClass('act');
-
-  //2. 콘텐츠 숨기거나 나타내기
-  const con = $(this).find('.con');
-  con.show().parent().siblings().find('.con').hide();
-
-
-  return false;//함수(이벤트) 종료
-});
-
-});
-  </script>
 </head>
 <body background="images/intro_bg.png">
 
@@ -70,48 +50,52 @@ tmnu.click(function(){
 
 
     <section id="intro_sec03">
-      <div class="info_img">
-        <img src="./images/info_img.jpg" alt="한미소개 이미지">
-      </div>
+      <div class="sec03_box">
+        <div class="info_img">
+          <img src="./images/info_img.jpg" alt="한미소개 이미지">
+        </div>
 
-      <div class="info_txt">
-        <h2>information</h2>
-        <h3>한미소개</h3>
-        <p>
-          <span>한미약품</span>
-          은 제약산업의 생명인 R&D 투자에 대한 강력한 의지를<br>
-          바탕으로 효율적이고 전략적인 연구개발 모델을 도출해내는 일에<br>
-          한미약품의 미래를 걸 계획입니다.
-        </p>
-        <p>
-          회사의 모든 역략을 R&D에 집중함으로써 신약 파이프라인을<br>
-          최대한 확보헤 세계 무대에서 통하는 글로벌 신약의 탄생 가능성을<br>
-          높여 나가겠습니다.
-        </p>
-        <a href="#none">더보기</a>
+        <div class="info_txt">
+          <h2>information</h2>
+          <h3>한미소개</h3>
+          <p>
+            <span>한미약품</span>
+            은 제약산업의 생명인 R&D 투자에 대한 강력한 의지를<br>
+            바탕으로 효율적이고 전략적인 연구개발 모델을 도출해내는 일에<br>
+            한미약품의 미래를 걸 계획입니다.
+          </p>
+          <p>
+            회사의 모든 역략을 R&D에 집중함으로써 신약 파이프라인을<br>
+            최대한 확보헤 세계 무대에서 통하는 글로벌 신약의 탄생 가능성을<br>
+            높여 나가겠습니다.
+          </p>
+          <a href="#none">더보기</a>
+        </div>
       </div>
     </section>
 
 
     <section id="intro_sec04">
-      <div class="esg_txt">
-        <h2>esg</h2>
-        <h3>지속가능경영연구</h3>
-        <p>
-          <span>한미약품</span>
-          의 제 1의사명은 모든 사람들의 생명과 건강을 지키고<br>
-          삶의 질을 향상시키기 위해 새로운 가치를 끊임없이 창조해내는 것입니다.
-        </p>
-        <p>
-          한미약품은 2년 연속 KCGS ESG평가에서 A등급 획득은 물론<br>
-          대한민국 지속가능성지수 제약부분 1위에 선정되는 등 국내 제약산업에서<br>
-          최고 수준의 ESG경영을 실천하고 있습니다.
-        </p>
-        <a href="#none">더보기</a>
-      </div>
+      <div class="sec04_box">
+        <div class="esg_img">
+          <img src="./images/esg_img.jpg" alt="esg 이미지">
+        </div>
+        <div class="esg_txt">
+          <h2>esg</h2>
+          <h3>지속가능경영연구</h3>
+          <p>
+            <span>한미약품</span>
+            의 제 1의사명은 모든 사람들의 생명과 건강을 지키고<br>
+            삶의 질을 향상시키기 위해 새로운 가치를 끊임없이 창조해내는 것입니다.
+          </p>
+          <p>
+            한미약품은 2년 연속 KCGS ESG평가에서 A등급 획득은 물론<br>
+            대한민국 지속가능성지수 제약부분 1위에 선정되는 등 국내 제약산업에서<br>
+            최고 수준의 ESG경영을 실천하고 있습니다.
+          </p>
+          <a href="#none">더보기</a>
+        </div>
 
-      <div class="esg_img">
-        <img src="./images/esg_img.jpg" alt="esg 이미지">
       </div>
     </section>
 
