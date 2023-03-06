@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+#login {
+  border: 1px solid #f00;
+  margin: 100px auto 50px auto;
+  width: 600px;
+
+}
+
+#login h2 {
+  text-align: left;
+  font-size: var(--f-size04);
+  font-weight: bold;
+  /* padding-bottom: 5px; */
+}
+
+#login p.title{
+  font-size: var(--f-size03);
+  margin: 10px 0;
+}
+
+div.title_box{
+  border-bottom: 5px solid var(--bg-color02);
+  margin: 5px 0;
+}
+
+#login form fieldset p {
+  margin: 30px 0;
+}
+
+label{
+  font-size: var(--f-size03);
+  display: block;
+}
+
+input[type=email], input[type=password]{
+  width: 500px;
+  height: 60px;
+  text-indent: 10px;
+  font-size: var(--f-size02);
+  margin: 0 auto;
+  display: block;
+}
+
+#login form fieldset ul {
+  display: flex;
+  justify-content: end;
+}
+
+#login form fieldset ul li{
+  margin: 0 7px;
+  position: relative;
+}
+
+#login form fieldset ul li::after{
+  content: "|";
+  position: absolute;
+  right: -10px;
+}
+
+#login form fieldset ul li:last-child::after{
+  content: "";
+}
+
+input[type=button]{
+  width: 500px;
+  height: 60px;
+  background-color: var(--bg-color02);
+  color: var(--f-color01);
+  font-size: var(--f-size03);
+  margin: 20px auto;
+  display: block;
+}
+
+div.sns_box ul{
+  display: flex;
+}
+
+div.sns_box ul img{
+  width: 100px;
+}
+
+
+
+
+
