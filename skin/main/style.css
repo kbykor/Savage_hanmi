@@ -1,6 +1,21 @@
+
+
+section > h2{
+  font-size: var(--f-size05);
+  margin: 100px 0px 20px 20px;
+}
+section > hr{
+  margin:0px 20px;
+  border: 3px solid #333;
+}
+
 .m_slide{
   height:100vh;
   position:relative;
+}
+
+.m_slide > h2{
+  display: none;
 }
 
 .ms_box{
@@ -14,37 +29,43 @@
 
 .ms_box > li img{
   width:1920px;
+  filter: brightness(50%);
 }
 
+/* 슬라이드 글씨 */
 .ms_box > li > span{
   position: absolute;
-  left: 23px;
-  top: 386px;
+  left: 100px;
+  top: 350px;
+  z-index: 1;
 }
 .ms_box > li:nth-child(2) > span{
-  top: 368px;
+  top: 265px;
 }
 
 .ms_subtitle{
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  margin:0px 0px 15px 0px;
+  font-size: 20px;
+  line-height: 80px;
+  color:#fff;
 }
 
 .ms_box > li > span > h3{
-  font-weight: 400;
-  font-size: 32px;
+  font-weight: bold;
+  font-size: var(--f-size06);
+  color:#fff;
   line-height: 37px;
 }
 
 .ms_box > li > span > p{
   font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  margin-top: 50px;
+  font-size: 20px;
+  color:#fff;
+  line-height: 32px;
+  margin-top: 100px;
+  /* letter-spacing: 1.5px; */
 }
 
+/* 슬라이드 게이지바 */
 .ms_gauge{
   position: absolute;
   width: 1920px;
@@ -63,6 +84,7 @@
   background: var(--main-color);
 }
 
+/* 슬라이드 버튼 */
 .ms_btn{
   position: absolute;
   top: 480px;
@@ -70,10 +92,12 @@
 }
 
 .ms_btn > span{
-  padding:1px 10px;
-  background: #9f9f9f;
+  width:15px;
+  height:15px;
+  border: 1px solid #fff;
   border-radius: 50%;
   margin:0px 5px;
+  display: inline-block;
 }
 
 .ms_btn > i.fas{
@@ -81,3 +105,117 @@
   font-size: 24px;
   transform: translateY(5px);
 }
+
+/* 메인슬라이드 검색창 */
+
+.ms_search{
+  width:1000px;
+  height:80px;
+  display: flex;
+  margin: 0px auto;
+  text-align: center;
+  background: rgba(255,255,255,.5);
+  transform: translateY(-120px);
+  border-radius: 30px;
+  filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.25));
+}
+
+.ms_search > li{
+  width:50%;
+}
+.ms_search > li:first-child{
+  border-right: 1px solid #333;
+}
+
+.ms_search > li > a{
+  line-height: 80px;
+  font-size: var(--f-size03);
+  border-bottom: 1px solid #333;
+}
+
+.ms_search > li i.fas{
+  font-size: 30px;
+  margin:0px 10px;
+}
+
+.ms_search > li i.fa-magnifying-glass{
+  font-size: 20px;
+}
+
+.ms_scroll{
+  width:40px;
+  height:50px;
+  margin:0px auto;
+  position: absolute;
+  bottom:0px;
+  left:50%;
+}
+
+/* 2sec 제품소개 */
+
+.m_product{
+height:960px;
+}
+
+
+/* 제품 슬라이드 */
+
+.ps_wrap{
+}
+
+.p_slide{
+width:500%;
+margin:0px auto;
+margin-top:100px;
+display: flex;
+
+}
+
+
+.p_slide > li{
+  position: relative;
+  width:100%;
+}
+.p_slide > li > div{
+}
+
+.p_slide > li > div:first-child{
+  width:500px; height:500px;
+  border:3px solid #e67175;
+  /* top:0px; */
+  position: absolute;
+  z-index: 3;
+}
+
+.p_slide > li > div:nth-child(2){
+  width:500px; height:500px;
+  background: var(--main-color);
+  position:absolute;
+  top:10px; left:10px;
+  z-index: 2;
+}
+
+.p_slide > li > div:last-child{
+  width:600px; height:480px;
+  background: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  ;
+  position:absolute;
+  top:50px; left:180px;
+  z-index: 1;
+}
+
+/* 3sec 한미소개 */
+.m_intro{
+  height:960px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../../images/m_intro_bg01.png);
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.m_intro > h2{
+  transform: translate(100px);
+  color:#fff;
+}
+
+/* 4sec 한미의 미래 */
