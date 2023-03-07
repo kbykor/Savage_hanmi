@@ -245,7 +245,6 @@ header{
   background: var(--bg-color01);
   box-sizing: border-box;
   line-height: 60px;
-  cursor: pointer;
 }
 .tab_map ul li a{
   display: block;
@@ -291,7 +290,7 @@ header{
 }
 .con_sub_bus{
   width: 100%;
-  height: 150px;
+  height: 100px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -310,8 +309,10 @@ header{
 
 
 .act{
+  border-bottom: 2px solid var(--main-color);
+}
+.act2{
   font-weight: bold;
   color: var(--main-color) !important;
-  border-bottom: 2px solid var(--main-color);
 }
 
