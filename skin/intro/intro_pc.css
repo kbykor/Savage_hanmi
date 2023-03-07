@@ -245,7 +245,6 @@ header{
   background: var(--bg-color01);
   box-sizing: border-box;
   line-height: 60px;
-  cursor: pointer;
 }
 .tab_map ul li a{
   display: block;
@@ -278,12 +277,20 @@ header{
   color: var(--f-color03);
   margin: 30px 0px;
 }
+.con_sub p:first-of-type{
+  font-weight: bold;
+}
 .con_sub p img{
   vertical-align: text-bottom;
 }
 .tf{
-  padding: 0px 20px;
+  width: 150px;
+  /* padding: 0px 20px; */
   font-size: var(--f-size02) !important;
+}
+.tf b{
+  font-weight: bold;
+  font-size: var(--f-size03);
 }
 .con_sub_num{
   display: flex;
@@ -291,11 +298,13 @@ header{
 }
 .con_sub_bus{
   width: 100%;
-  height: 150px;
+  height: 100px;
   display: flex;
   align-items: center;
   gap: 20px;
-  margin: 20px 0px;
+}
+.con_sub_bus img{
+  width: 70px; height: 70px;
 }
 .con_sub_bus P{
   font-size: var(--f-size02);
@@ -310,8 +319,51 @@ header{
 
 
 .act{
-  font-weight: bold;
-  color: var(--main-color) !important;
   border-bottom: 2px solid var(--main-color);
 }
+.act2{
+  font-weight: bold;
+  color: var(--main-color) !important;
+}
 
+/* 버튼 효과 */
+.m_btn{
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 50px;
+  color: var(--f-color03);
+  border: 1px solid var(--bg-color03);
+  transition: all 0.5s;
+}
+.m_btn:hover{
+  color: var(--f-color01);
+  border: 1px solid var(--main-color);
+}
+.m_btn::before{
+  content: "";
+  position: absolute;
+  top: 0px; left:100%;
+  width: 100%; height: 100%;
+  background: var(--main-color);
+  transition: left 0.5s;
+  z-index: -1;
+  /* visibility: hidden; */
+}
+.m_btn:hover::before{
+  animation-name: bgMove;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-iteration-count: 50%;
+  color: var(--f-color01);
+  left: 0;
+  /* visibility: visible; */
+}
+@keyframes bgMove {
+  0% {
+    transform:translateX(-200%);
+  }
+  100% {
+    transform:translateX(0);
+  }
+}
