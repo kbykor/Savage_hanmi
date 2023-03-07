@@ -21,6 +21,7 @@ $(function(){
   //////////지도 탭메뉴//////////
   //1. 변수선언
   const tmnu = $('.tab_map li');
+  const tmnua = $('.tab_map li a');
   // $('.con:first-of-type').show().parent().siblings().find('.con').hide(); // 첫번째 con 요소 보이기
 
   //2. 클릭이벤트
@@ -34,6 +35,10 @@ $(function(){
 
 
     return false;//함수(이벤트) 종료
+  });
+  
+  tmnua.click(function(){
+    $(this).addClass('act2').parent().siblings().find('a').removeClass('act2');
   });
 
 });
