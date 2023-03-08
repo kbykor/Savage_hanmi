@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@media screen and (min-width:415px) and (max-width:1024px){
+@media screen and (min-width:768px) and (max-width:1024px){
 
 
 
@@ -68,7 +68,7 @@ header{
 .ceo_ms{
   position: relative;
   transform: translateY(-15%);
-  /* display: none; */
+  display: none;
 }
 .ceo_ms h3{
   font-size: var(--f-size06);
@@ -99,7 +99,7 @@ header{
 
 .sec03_box{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
   width: 100%; height: 100%;
@@ -112,14 +112,14 @@ header{
 .info_img img{
   display: inline-block;
   width: 100%;
-  max-width: 350px;
+  max-width: 320px;
   vertical-align: top;
 }
 .info_txt{
   width: 50%;
   margin-top: 250px;
   animation: fadein 3s;
-  /* display: none; */
+  display: none;
 }
 @keyframes fadein{
   0% {
@@ -161,24 +161,23 @@ header{
   border: 1px solid#333;
 }
 
-
 /* 기업소개 4번 섹션 */
 #intro_sec04{
-  width: 100%;
+  width: 100%; height: 100%;
   position: relative;
   padding: 50px 0px; 
 }
 .sec04_box{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 0px 3rem;
+  padding: 0px 2rem;
 }
 .esg_txt{
   width: 50%;
   animation: fadein2 3s;
-  /* display: none; */
+  display: none;
   text-align: right;
 }
 @keyframes fadein2{
@@ -219,12 +218,12 @@ header{
   border: 1px solid#333;
 }
 .esg_img{
-  margin-top: 250px;
+  margin-top: 350px;
   box-shadow: 10px 20px 50px 5px rgba(0, 0, 0, 0.3); 
 } 
 .esg_img img{
   width: 100%;
-  max-width: 350px;
+  max-width: 320px;
   vertical-align: top;
   display: inline-block; 
 }
@@ -246,7 +245,7 @@ header{
   padding: 30px 0px;
 }
 .tab_map{
-  width: 80%;
+  width: 90%;
   margin: 0px auto;
   position: relative;
 }
@@ -280,13 +279,13 @@ header{
   width: 100%;
   position: relative;
   bottom: 0px; left: 0px;
-  height: 150px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .con_sub p{
-  font-size: var(--f-size03);
+  font-size: 1.25rem;
   line-height: 25px;
   color: var(--f-color03);
   margin: 30px 0px;
@@ -298,27 +297,30 @@ header{
   vertical-align: text-bottom;
 }
 .tf{
-  width: 150px;
+  width: 100px;
   /* padding: 0px 20px; */
   font-size: var(--f-size02) !important;
 }
 .tf b{
   font-weight: bold;
-  font-size: var(--f-size03);
+  font-size: 1.25rem;
 }
 .con_sub_num{
   display: flex;
   align-items: center;
 }
+.con_sub_num p img{
+  width: 50px; height: 50px;
+}
 .con_sub_bus{
   width: 100%;
-  height: 100px;
+  height: 70px;
   display: flex;
   align-items: center;
   gap: 20px;
 }
 .con_sub_bus img{
-  width: 70px; height: 70px;
+  width: 50px; height: 50px;
 }
 .con_sub_bus P{
   font-size: var(--f-size02);
@@ -327,7 +329,7 @@ header{
   text-align: left;
 }
 .con_sub_bus P b{
-  font-size: var(--f-size03);
+  font-size: 1.25rem;
 }
 
 .act{
