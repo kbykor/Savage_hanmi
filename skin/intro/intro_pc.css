@@ -19,10 +19,25 @@ header{
   text-align: center;
   position: relative;
 }
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.25;
+}
+.bg-video > video{
+  width: 100%; height: 120%;
+  object-fit: cover;
+  z-index: -1;
+}
 .sec01_txt{
   position: absolute;
   top: 50%; left: 50%; 
   transform: translate(-50%, -50%);
+  color: var(--bg-color01);
 }
 .sec01_txt h2{
   font-size:var(--f-size06);
@@ -40,22 +55,29 @@ header{
 
 /* 기업소개 2번 섹션 */
 #intro_sec02{
-  width: 100%; height: 600px;
+  width: 100%; height: 100vh;
   position: relative;
   text-align: center;
   padding: 50px 0px; 
-  background: linear-gradient(180deg, rgba(255, 254, 254, 0) 0%, #fff 17.29%, #fff 82.43%, rgba(255, 254, 254, 0) 99.48%);
+  background: linear-gradient(180deg, rgba(255, 254, 254, 0) 0%, #fff 17.29%, #fff 32.43%, rgba(255, 254, 254, 0) 99.48%);
 }
 #intro_sec02 h2{
   font-size: 120px;
   text-transform: uppercase;
   color: rgba(49, 27, 25, 0.1);
-  line-height: 220px;
+}
+.sec02_box{
+  width: 100%;
+  margin: 0px auto;
+  padding: 10px 1rem;
+  position: relative;
+  top: 50%; 
+  transform: translateY(-50%);
+  text-align: center;
 }
 .ceo_ms{
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  transform: translateY(-20%);
   display: none;
 }
 .ceo_ms h3{
@@ -75,6 +97,13 @@ header{
   width: 140px;
   position: absolute;
   right: -100px;
+}
+.sec02_box img{
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  max-width: 150px;
+  bottom: 0px; right: 30%;
 }
 
 
@@ -219,7 +248,7 @@ header{
 #intro_sec05{
   width: 100%;
   text-align: center;
-  padding: 100px 0px; 
+  padding: 100px 0px 890px; 
 }
 #intro_sec05 h2{
   font-size: var(--f-size05);
@@ -334,6 +363,7 @@ header{
   color: var(--f-color03);
   border: 1px solid var(--bg-color03);
   transition: all 0.5s;
+  font-weight: bold;
 }
 .m_btn:hover{
   color: var(--f-color01);

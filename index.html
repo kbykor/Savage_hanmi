@@ -19,6 +19,14 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <!-- 메인스크립트 -->
   <script src="./skin/main/main.js"></script>
+  <script>
+    let modal = `
+    <div class="m_modal">
+      <div class="m_map">
+        <h3>판매 약국 검색</h3>
+        <hr>
+    `
+  </script>
 </head>
 <body>
   <main>
@@ -212,25 +220,25 @@
         <li>
           <i class="fa-brands fa-fort-awesome"></i>
           <p>연혁</p>
-          <p>50<span class="mi_size01">년</span></p>
+          <p><span class="mi_size01">50</span>년</p>
           <p>Since 1973</p>
         </li>
         <li>
           <i class="fa-solid fa-award"></i>
           <p>원외처방</p>
-          <p>1<span class="mi_size01">위</span></p>
+          <p><span class="mi_size01">1</span>위</p>
           <p>5년연속</p>
         </li>
         <li>
           <i class="fa-solid fa-atom"></i>
           <p>R&D투자금</p>
-          <p>1000<span class="mi_size01">억</span></p>
+          <p><span class="mi_size01">1000</span>억</p>
           <p>업계최초</p>
         </li>
         <li>
           <i class="fa-solid fa-book-bookmark"></i>
           <p>제품</p>
-          <p>251<span class="mi_size01">개</span></p>
+          <p><span class="mi_size01">251</span>개</p>
           <p>&nbsp;</p>
         </li>
       </ul>
@@ -271,42 +279,103 @@
     <section class="m_investment">
       <h2>투자정보</h2>
       <hr>
-      <p class="miv_txt01">인류건강과 행복실현이라는
+      <p class="miv_txt01"><strong>인류건강과 행복실현</strong>이라는<br>
         변하지 않는 가치를 위해 원칙을 지킵니다.</p>
-      <article>
-        <h3>실시간 주가정보</h3>
-      <table>
-        <tr>
-          <th>실시간 주가 정보</th>
-          <td>400,000</td><td>전일대비<br>265,500</td>
-        </tr>
-        </table>
-      </article>
-      <article>
-        <h3>News</h3>
-        <a href="#" title="한미소식 더보기">더보기+</a>
-        <hr>
-        <ul>
-          <li><a href="#" title="뉴스1">한미약품, 5년 연속 원외처방 1위</a></li>
-          <li><a href="#" title="뉴스2">JVM, 창사 이래 최대 年매출 1419억원 달성</a></li>
-          <li><a href="#" title="뉴스3">한미약품 로수젯, 자랑스러워 해도 된다.</a></li>
-          <li><a href="#" title="뉴스4">한미약품그룹 ‘새로운 50년, Global 한미!’</a></li>
-          <li><a href="#" title="뉴스5">5년간 R&D에 1조 쏟았다.</a></li>
-        </ul>
-      </article>
-      <article>
-        <h3>IR</h3>
-        <a href="#" title="IR 더보기">더보기+</a>
-        <hr>
-        <ul>
-          <li><a href="#" title="IR">2023년 1분기 기업설명회</a></li>
-          <li><a href="#" title="IR">2022년 4분기 실적발표</a></li>
-          <li><a href="#" title="IR">2022년 4분기 기업설명회</a></li>
-          <li><a href="#" title="IR">2022년 3분기 실적발표</a></li>
-          <li><a href="#" title="IR">2022년 2분기 실적발표</a></li>
-        </ul>
-      </article>
 
+      <article class="miv_wrap">
+        <h3>실시간 주가정보</h3>
+        <div class="miv_box">
+          <table>
+          <tr>
+            <th colspan="2">실시간 주가 정보</th>
+          </tr>
+          <tr>
+            <td>&#9650; 400,000</td>
+            <td>전일대비<br>265,500</td>
+          </tr>
+          </table>
+        </div>
+        <div class="m_news">
+        <h3>News</h3>
+        <a href="#" title="한미소식 더보기">더보기 +</a>
+        <hr>
+        <ul>
+          <li>
+            <a href="#" title="뉴스1">
+              <span>한미약품, 5년 연속 원외처방 1위</span>
+              <span>02-03</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" title="뉴스2">
+              <span>JVM, 창사 이래 최대 年매출 1419억원 달성</span>
+              <span>01-27</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" title="뉴스3">
+              <span>“아모잘탄패밀리·클로잘탄정·로수젯정, 심혈관질환 예방 통합관리에 효과적”</span>
+              <span>01-19</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" title="뉴스4">
+              <span>“한미약품 로수젯, 심혈관 질환 있는 ‘당뇨병 환자’ LDL-C 관리에 탁월”</span>
+              <span>01-17</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" title="뉴스5">	
+              <span>한미약품그룹 ‘새로운 50년, Global 한미!’ 기치로 새해 힘찬 출발</span>
+              <span>01-02</span>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+      <div class="m_ir">
+        <h3>IR</h3>
+        <a href="#" title="IR 더보기">더보기 +</a>
+        <hr>
+        <ul>
+          <li>
+            <a href="#" title="IR">
+              <span>2023년 1분기 기업설명회</span>
+              <span>02-10</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="IR">
+              <span>2022년 4분기 실적발표</span>
+              <span>02-08</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="IR">
+              <span>2022년 4분기 기업설명회</span>
+              <span>11-03</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="IR">
+              <span>2022년 3분기 실적발표</span>
+              <span>11-01</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="IR">
+              <span>2022년 2분기 실적발표</span>
+              <span>07-19</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </article>
     </section>
   </main>
 </body>
