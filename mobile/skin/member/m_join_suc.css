@@ -1,7 +1,7 @@
 @charset "utf=8";
 
 main{
-  width: 500px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -9,7 +9,7 @@ main{
 
 article{
   position: absolute;
-  width: 500px;
+  width: 95%;
   /* top: 50%; */
   left: 50%;
   transform:translateX(-50%);
@@ -19,11 +19,11 @@ article{
 i.fa-circle-check {
   color: var(--main-color);
   font-size: var(--f-size06);
-  margin: 30px 0;
+  margin: 30px auto;
 }
 
 article p{
-  margin: 10px 0;
+  margin: 10px auto;
 }
 
 article p:first-of-type{
@@ -35,16 +35,17 @@ article p:last-of-type{
 }
 
 button {
-  width: 230px;
+  width: 95%;
   height: 50px;
   border: none;
   background-color: var(--bg-color02);
   color: var(--f-color01);
   font-weight: bold;
   font-size: var(--f-size02);
-  margin: 20px 0;
+  margin: 20px auto;
   transition: 0.3s;
   cursor: pointer;
+  display: block;
 }
 
 button:hover{
