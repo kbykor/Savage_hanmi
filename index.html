@@ -19,14 +19,6 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <!-- 메인스크립트 -->
   <script src="./skin/main/main.js"></script>
-  <script>
-    let modal = `
-    <div class="m_modal">
-      <div class="m_map">
-        <h3>판매 약국 검색</h3>
-        <hr>
-    `
-  </script>
 </head>
 <body>
   <main>
@@ -84,7 +76,7 @@
         </li>
         <li>
           <i class="fas fa-store"></i>
-          <a href="#">
+          <a href="#" title="판매약국검색" id="map_search">
           <span class="m_color01">판매약국</span>을 검색해 보세요
           <i class="fas fa-magnifying-glass"></i>
           </a>
@@ -98,10 +90,11 @@
       <h2>한미제품</h2>
       <hr>
       <article>
+      <div class="p_box">
       <ul class="p_slide">
         <li>
           <div class="ps_wrap">
-            
+            <a href="">
             <div>
               <img src="./images/main_product01.png" alt="">
             </div>
@@ -113,35 +106,15 @@
               <p>비타민 A, C, D 등의 보급<br>
                 발육기, 병중·병후, 육체피로<br>
                 눈의 건조함의 완화, 야맹증</p>
-              
               </div>
             </div>
-          </div>
-
-        </li>
-        <li>
-          <div class="ps_wrap">
-            
-            <div>
-              <img src="./images/main_product01.png" alt="">
-            </div>
-            <div>
-              <p class="p_badge">일반의약품</p>
-              <div class="p_info">
-                <h3>텐텐</h3>
-              <hr>
-              <p>비타민 A, C, D 등의 보급<br>
-                발육기, 병중·병후, 육체피로<br>
-                눈의 건조함의 완화, 야맹증</p>
-              
-              </div>
-            </div>
+          </a>
           </div>
         </li>
-
+      
         <li>
           <div class="ps_wrap">
-            
+            <a href="">
             <div>
               <img src="./images/main_product01.png" alt="">
             </div>
@@ -153,15 +126,15 @@
               <p>비타민 A, C, D 등의 보급<br>
                 발육기, 병중·병후, 육체피로<br>
                 눈의 건조함의 완화, 야맹증</p>
-              
               </div>
             </div>
+          </a>
           </div>
         </li>
 
         <li>
           <div class="ps_wrap">
-            
+            <a href="">
             <div>
               <img src="./images/main_product01.png" alt="">
             </div>
@@ -173,15 +146,15 @@
               <p>비타민 A, C, D 등의 보급<br>
                 발육기, 병중·병후, 육체피로<br>
                 눈의 건조함의 완화, 야맹증</p>
-              
               </div>
             </div>
+          </a>
           </div>
         </li>
 
         <li>
           <div class="ps_wrap">
-            
+            <a href="">
             <div>
               <img src="./images/main_product01.png" alt="">
             </div>
@@ -193,12 +166,33 @@
               <p>비타민 A, C, D 등의 보급<br>
                 발육기, 병중·병후, 육체피로<br>
                 눈의 건조함의 완화, 야맹증</p>
-              
               </div>
             </div>
+          </a>
+          </div>
+        </li>
+
+        <li>
+          <div class="ps_wrap">
+            <a href="">
+            <div>
+              <img src="./images/main_product01.png" alt="">
+            </div>
+            <div>
+              <p class="p_badge">일반의약품</p>
+              <div class="p_info">
+                <h3>텐텐</h3>
+              <hr>
+              <p>비타민 A, C, D 등의 보급<br>
+                발육기, 병중·병후, 육체피로<br>
+                눈의 건조함의 완화, 야맹증</p>
+              </div>
+            </div>
+          </a>
           </div>
         </li>
       </ul>
+    </div>
       <span class="p_lbtn">&nbsp;</span>
       <span class="p_rbtn">&nbsp;</span>
       <div class="p_bgimg">
@@ -255,22 +249,28 @@
 
         <article class="mf_wrap">
           <div>
-            <div class="mf_circle">
-              <img src="./images/main_4sec_icon01.png" alt="New Drug Development">
-            </div>
-            <p class="mf_txt01">New Drug Development</p>
+            <a href="#" title="New Drug Development">
+              <div class="mf_circle">
+                <img src="./images/main_4sec_icon01.png" alt="New Drug Development">
+              </div>
+              <p class="mf_txt01">New Drug Development</p>
+            </a>
           </div>
           <div>
+            <a href="#" title="R&D Open Innovation">
             <p class="mf_txt02">R&D Open Innovation</p>
             <div class="mf_circle">
               <img src="./images/main_4sec_icon02.png" alt="R&D Open Innovation">
+              </a>
             </div>
           </div>
           <div>
+            <a href="#" title="ESG 경영">
             <div class="mf_circle">
               <img src="./images/main_4sec_icon03.png" alt="ESG 경영">
             </div>
             <p class="mf_txt01">ESG 경영</p>
+            </a>
           </div>
         </article>
     </section>
@@ -287,7 +287,7 @@
         <div class="miv_box">
           <table>
           <tr>
-            <th colspan="2">실시간 주가 정보</th>
+            <th colspan="2">실시간 주가 정보 <a href="#" title="주가정보 더보기">더보기 +</a></th>
           </tr>
           <tr>
             <td>&#9650; 400,000</td>

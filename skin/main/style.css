@@ -128,12 +128,12 @@ section > hr{
 
 .ms_search{
   width:800px;
-  height:80px;
+  height:60px;
   display: flex;
   margin: 0px auto;
   text-align: center;
   background: rgba(255,255,255,.5);
-  transform: translateY(-120px);
+  transform: translateY(-150px);
   border-radius: 30px;
   filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.25));
 }
@@ -146,7 +146,7 @@ section > hr{
 }
 
 .ms_search > li > a{
-  line-height: 80px;
+  line-height: 60px;
   font-size: 20px;
   border-bottom: 1px solid #333;
 }
@@ -164,7 +164,7 @@ section > hr{
 
 .ms_scroll{
   text-align: center;
-  transform: translateY(-120px);
+  transform: translateY(-130px);
 }
 
 .ms_scroll > img{
@@ -209,14 +209,14 @@ display: flex;
 .p_slide > li > div{
 }
 
-.p_slide > li > .ps_wrap > div:first-child{
+.p_slide > li > .ps_wrap > a > div:first-child{
   width:500px; height:500px;
   background: var(--main-color);
   position:absolute;
   top:10px; left:10px;
   z-index: 2;
 }
-.p_slide > li > .ps_wrap > div:first-child::after{
+.p_slide > li > .ps_wrap > a > div:first-child::after{
   display : block;
 content:"";
 width:500px;
@@ -225,7 +225,7 @@ border:3px solid rgb(253, 213, 213);
 transform:translate(-20px,-470px);
 }
 
-.p_slide > li > .ps_wrap > div:last-child{
+.p_slide > li > .ps_wrap > a > div:last-child{
   width:600px; height:520px;
   background: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
@@ -442,7 +442,7 @@ i.fa-book-bookmark{
   top:20px;
 }
 
-.mf_circle > img{
+.mf_circle img{
   width:120px;
   height:120px;
   position: absolute;
@@ -464,11 +464,11 @@ i.fa-book-bookmark{
   transform: translateX(-100px);
 }
 
-.mf_wrap > div:first-of-type > .mf_txt01{
+.mf_wrap > div:first-of-type .mf_txt01{
   transform: translateX(-120px);
 }
 
-.mf_wrap > div > p::after{
+.mf_wrap > div p::after{
   content:"";
   width:10px;
   height: 120px;
@@ -478,14 +478,14 @@ i.fa-book-bookmark{
   position: absolute;
 }
 
-.mf_wrap > div:first-child > p::after{
+.mf_wrap > div:first-child p::after{
   left:50%;
   top:-150px;
 }
-.mf_wrap > div:nth-child(2) > p::after{
+.mf_wrap > div:nth-child(2) p::after{
   left:50%; top:70px;
 }
-.mf_wrap > div:last-child > p::after{
+.mf_wrap > div:last-child p::after{
   top:200px; right:130px;
 }
 
@@ -537,8 +537,16 @@ i.fa-book-bookmark{
   font-size: var(--f-size03);
   color: #fff;
   line-height: 60px;
+  text-align: left;
+  padding-left:20px;
 }
 
+.miv_box > table th > a{
+  font-size: var(--f-size02);
+  float: right;
+  padding-right:40px;
+  color:#fff;
+}
 
 .miv_box > table tr td:first-of-type{
   font-size: 40px;
