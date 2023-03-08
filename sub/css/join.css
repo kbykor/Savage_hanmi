@@ -45,6 +45,15 @@ div.join_agree01, div.join_agree02 {
   line-height: 20px;
 }
 
+span.agree_btn_act{
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
+div.agree_tab02{
+  display: none;
+}
+
 textarea {
   width: 500px;
   height: 150px;

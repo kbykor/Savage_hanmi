@@ -17,6 +17,7 @@
 
 section > h2{
   font-size: var(--f-size05);
+  padding: 100px 0px 20px 80px;
 }
 
 section > hr{
@@ -126,7 +127,7 @@ section > hr{
 /* 메인슬라이드 검색창 */
 
 .ms_search{
-  width:1000px;
+  width:800px;
   height:80px;
   display: flex;
   margin: 0px auto;
@@ -146,13 +147,15 @@ section > hr{
 
 .ms_search > li > a{
   line-height: 80px;
-  font-size: var(--f-size03);
+  font-size: 20px;
   border-bottom: 1px solid #333;
 }
 
 .ms_search > li i.fas{
   font-size: 30px;
   margin:0px 10px;
+  transform: translateY(5px);
+  color:
 }
 
 .ms_search > li i.fa-magnifying-glass{
@@ -173,10 +176,6 @@ section > hr{
 
 .m_product{
 height:960px;
-}
-
-.m_product > h2{
-  margin: 100px 0px 20px 80px;
 }
 
 /* 제품 슬라이드 */
@@ -339,7 +338,7 @@ transform:translate(-20px,-470px);
   display: flex;
   justify-content: space-around;
   position: absolute;
-  top:50%; left:50%;
+  top:55%; left:50%;
   transform: translate(-50%, -10%);
 }
 
@@ -349,7 +348,7 @@ transform:translate(-20px,-470px);
 }
 
 .mi_wrap > li > i{
-  font-size: 70px;
+  font-size: 60px;
   margin-bottom: 60px;
 }
 
@@ -358,7 +357,7 @@ transform:translate(-20px,-470px);
   margin-bottom:50px
 }
 .mi_wrap > li > p:nth-of-type(2){
-  font-size: 90px;
+  font-size: 48px;
   margin-bottom: 50px;
   font-weight: bold;
 }
@@ -367,9 +366,22 @@ transform:translate(-20px,-470px);
 }
 
 .mi_size01{
-  font-size: 48px;
+  font-size: 90px;
 }
 
+/* 아이콘 */
+i.fa-fort-awesome{
+  color:#1056E5;
+}
+i.fa-award{
+  color:#A5A179;
+}
+i.fa-atom{
+  color:#8865FB;
+}
+i.fa-book-bookmark{
+  color:#66C0FF;
+}
 
 
 
@@ -389,7 +401,6 @@ transform:translate(-20px,-470px);
 .m_future > h2{
   color:#fff;
   padding: 100px 0px 20px 80px;
-  margin:0px;
 }
 
 .m_future > hr{
@@ -450,17 +461,52 @@ transform:translate(-20px,-470px);
   color:#fff;
   font-size: 40px;
   text-align: center;
+  transform: translateX(-100px);
 }
 
 .mf_wrap > div:first-of-type > .mf_txt01{
   transform: translateX(-120px);
 }
 
+.mf_wrap > div > p::after{
+  content:"";
+  width:10px;
+  height: 120px;
+  color:#fff;
+  border-left: 3px dotted #fff;
+  display: block;
+  position: absolute;
+}
+
+.mf_wrap > div:first-child > p::after{
+  left:50%;
+  top:-150px;
+}
+.mf_wrap > div:nth-child(2) > p::after{
+  left:50%; top:70px;
+}
+.mf_wrap > div:last-child > p::after{
+  top:200px; right:130px;
+}
 
 /* 투자정보 */
 
-.m_investment > article > h3{
+.m_investment > h2{
+  padding: 100px 0px 20px 80px;
+  color:#333
+}
+
+.m_investment > .miv_wrap{
+  display: flex;
+  justify-content: space-around;
+}
+
+.m_investment > .miv_wrap > h3{
   display: none;
+}
+
+.miv_wrap{
+  margin-bottom: 100px;
 }
 
 .miv_txt01{
@@ -468,4 +514,93 @@ transform:translate(-20px,-470px);
   color:#333;
   font-size: var(--f-size04);
   line-height: 45px;
+}
+
+.miv_box{
+  width:480px;
+  height:150px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  margin-top:35px;
+}
+
+.miv_box > table{
+  border-radius: 30px;
+  width:500px;
+  height:150px;
+}
+
+.miv_box > table th{
+  background: var(--main-color);
+  height:60px;
+  font-size: var(--f-size03);
+  color: #fff;
+  line-height: 60px;
+}
+
+
+.miv_box > table tr td:first-of-type{
+  font-size: 40px;
+  line-height: 90px;
+  text-align: center;
+  color:var(--main-color);
+}
+
+
+.miv_box > table td:last-of-type{
+  line-height: 20px;
+  margin-bottom: 30px;
+  transform: translateY(-15px);
+  color:#333;
+  font-weight: bold;
+}
+
+.m_news, .m_ir{
+  width:470px;
+  padding:0px 10px;
+  transform: translateY(-50px);
+}
+
+.m_news::after{
+  content:"";
+  width:10px;
+  height: 240px;
+  border-left: 1px solid #ccc;
+  display: block;
+  position: relative;
+  top:-250px; left:540px;
+}
+
+.miv_wrap div >h3{
+  font-size: var(--f-size04);
+  color:#333;
+}
+
+.miv_wrap div > a{
+  float: right;
+  transform: translateY(-20px);
+}
+
+.miv_wrap ul>li{
+  margin-bottom: 20px;
+  width:100%;
+}
+
+.miv_wrap ul>li > a{
+  display: flex;
+  justify-content: space-between;
+}
+.miv_wrap ul>li > a > span:first-child{
+  color:#333;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+  display: block;
+  width:350px;
+}
+
+.miv_wrap ul>li > a > span > span{
+  color:#333;
+  
 }
