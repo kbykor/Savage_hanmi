@@ -127,6 +127,7 @@ form div label:not(.data_email_agree){
 form div input{
   height: 50px;
   text-indent: 10px;
+  color: #b9b6b6;
 }
 
 form div input:not(#data_email, #data_email02, #data_email_agree){
@@ -143,11 +144,12 @@ div.data_email>input{
   height: 50px;
   margin: 10px auto;
   text-indent: 10px;
+  color: #b9b6b6;
 }
 
 p.small{
   font-size: var(--f-size01);
-  margin:3px;
+  margin:5px;
 }
 
 div.data_email_agree{
@@ -160,7 +162,7 @@ p.email_check{
   top:5px;
 }
 
-div.box_commit > input{
+div.box_commit > input, button[type=button]{
   width: 500px;
   height: 50px;
   display: inline-block;
@@ -174,11 +176,13 @@ input[type=submit]{
   background-color: var(--bg-color02);
   color: var(--f-color01);
   margin: 50px auto 100px auto;
+  text-indent: 0;
 }
 
-input[type=reset]{
+button[type=button]{
   border: none;
   background-color: rgba(0, 0, 0, 0);
+  color: var(--f-color02);
 }
 
 

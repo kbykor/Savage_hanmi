@@ -3,7 +3,7 @@
 #login {
   /* border: 1px solid #f00; */
   margin: 100px auto 50px auto;
-  width: 500px;
+  width: 95%;
 
 }
 
@@ -21,11 +21,12 @@
 
 div.title_box{
   border-bottom: 5px solid var(--bg-color02);
-  margin: 10px 0;
+  margin: 10px auto;
+  width: 95%;
 }
 
 fieldset {
-  width: 500px;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -40,7 +41,7 @@ label{
 }
 
 input[type=email], input[type=password]{
-  width: 500px;
+  width: 100%;
   height: 60px;
   text-indent: 10px;
   font-size: var(--f-size02);
@@ -51,6 +52,7 @@ input[type=email], input[type=password]{
 #login form fieldset ul.ul_login {
   display: flex;
   justify-content: end;
+  margin-right: 3%;
 }
 
 #login form fieldset ul.ul_login li{
@@ -78,7 +80,7 @@ input[type=email], input[type=password]{
 }
 
 input[type=button]{
-  width: 500px;
+  width: 100%;
   height: 60px;
   background-color: var(--bg-color02);
   color: var(--f-color01);
@@ -87,13 +89,6 @@ input[type=button]{
   margin: 50px auto 100px auto;
   display: block;
   cursor: pointer;
-  border: none;
-  transition: 0.3s;
-}
-
-input[type=button]:hover{
-  background-color: var(--main-color);
-  /* color: var(--f-color01); */
 }
 
 div.sns_box p {
@@ -109,7 +104,7 @@ div.sns_box ul{
 }
 
 div.sns_box ul img{
-  width: 70px;
+  width: 70%;
 }
 
 

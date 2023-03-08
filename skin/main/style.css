@@ -1,14 +1,31 @@
+/* 공통 */
+.m_color01{
+  color:var(--main-color);
+}
+.m_txt01{
+  margin: 50px 0px 15px 80px;
+  color:#fff;
+  font-size: var(--f-size04);
+  line-height: 45px;
+}
 
+.m_txt02{
+  color:#fff;
+  margin-left: 80px;
+  line-height: 30px;
+}
 
 section > h2{
   font-size: var(--f-size05);
-  margin: 100px 0px 20px 20px;
 }
+
 section > hr{
-  margin:0px 20px;
+  margin:0px 80px;
   border: 3px solid #333;
 }
 
+
+/* 메인슬라이드 */
 .m_slide{
   height:100vh;
   position:relative;
@@ -158,10 +175,18 @@ section > hr{
 height:960px;
 }
 
+.m_product > h2{
+  margin: 100px 0px 20px 80px;
+}
 
 /* 제품 슬라이드 */
 
+.m_product{
+  position: relative;
+}
+
 .ps_wrap{
+
 }
 
 .p_slide{
@@ -202,22 +227,92 @@ transform:translate(-20px,-470px);
 }
 
 .p_slide > li > .ps_wrap > div:last-child{
-  width:600px; height:480px;
+  width:600px; height:520px;
   background: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
   ;
   position:absolute;
-  top:50px; left:180px;
+  top:20px; left:180px;
   z-index: 1;
 }
 
-.ms_info{
+.p_info{
   width:200px;
-  height: 480px;
+  height: 550px;
   text-align: left;
   position: absolute;
   right: 40px;
-  top:30%;
+  top:40%;
+}
+
+.p_info > p{
+  line-height: 24px;
+}
+
+.p_badge{
+  position:absolute;
+  top:10px;
+  right:30px;
+  background: var(--main-color);
+  padding:8px 5px;
+  border-radius: 5px;
+  color:#fff;
+  line-height: 16px;
+}
+
+/* 버튼 */
+.p_lbtn, .p_rbtn{
+  width:60px;
+  height:60px;
+  border:3px solid #333;
+  border-radius: 50%;
+  position:absolute;
+  top:calc(50%);
+}
+
+.p_lbtn{
+  left:200px;
+}
+
+.p_lbtn::after{
+  content:"";
+  width: 12px;
+  height: 12px;
+  border-left: solid 2px #222;
+  border-bottom: solid 2px #222;
+  display: block;
+  transform:rotate(45deg);
+  position:relative;
+  left:22px;
+  top:5px;
+}
+
+.p_rbtn::after{
+  content:"";
+  width: 12px;
+  height: 12px;
+  border-left: solid 2px #222;
+  border-bottom: solid 2px #222;
+  display: block;
+  transform:rotate(225deg);
+  position:relative;
+  left:18px;
+  top:5px;
+}
+
+.p_rbtn{
+  right:200px;
+}
+
+.p_bgimg {
+  position: absolute;
+  right: -18%;
+  top: -9%;
+}
+
+.p_bgimg > img {
+  width: 1500px;
+  height: 1500px;
 }
 
 /* 3sec 한미소개 */
@@ -226,11 +321,151 @@ transform:translate(-20px,-470px);
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../../images/m_intro_bg01.png);
   background-repeat: no-repeat;
   background-size:cover;
+  background-attachment:fixed;
+  position: relative;
 }
 
 .m_intro > h2{
-  transform: translate(100px);
+  color:#fff;
+  padding:100px 0px 20px 80px;
+}
+
+.m_intro > hr{
+  border: 3px solid #fff;
+}
+
+.mi_wrap{
+  width:1500px;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top:50%; left:50%;
+  transform: translate(-50%, -10%);
+}
+
+.mi_wrap > li{
+  text-align: center;
   color:#fff;
 }
 
+.mi_wrap > li > i{
+  font-size: 70px;
+  margin-bottom: 60px;
+}
+
+.mi_wrap > li > p:first-of-type{
+  font-size: 20px;
+  margin-bottom:50px
+}
+.mi_wrap > li > p:nth-of-type(2){
+  font-size: 90px;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+.mi_wrap > li > p:last-of-type{
+  font-size: var(--f-size03);
+}
+
+.mi_size01{
+  font-size: 48px;
+}
+
+
+
+
+
+
 /* 4sec 한미의 미래 */
+
+.m_future{
+  height:1200px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../images/main_4sec.jpg);
+  margin:0px 0px;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment:fixed;
+}
+
+.m_future > h2{
+  color:#fff;
+  padding: 100px 0px 20px 80px;
+  margin:0px;
+}
+
+.m_future > hr{
+  border: 3px solid #fff;
+}
+
+.mf_wrap{
+  width:1300px;
+  display: flex;
+  position: relative;
+  margin:0px auto;
+  justify-content: space-around;
+  top:200px;
+}
+
+.mf_circle{
+  width:200px;
+  height:200px;
+  background: var(--main-color);
+  border-radius: 50%;
+  position: relative;
+}
+
+.mf_wrap > div:nth-of-type(2) > .mf_circle{
+  top:150px;
+}
+
+.mf_circle::before{
+  width:200px;
+  height:200px;
+  border:3px solide #ffc0c0;
+  content:"";
+  display: block;
+  background: none;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  position: absolute;
+  left:10px;
+  top:20px;
+}
+
+.mf_circle > img{
+  width:120px;
+  height:120px;
+  position: absolute;
+  left:50%; top:50%;
+  transform: translate(-50%, -50%);
+}
+
+.mf_txt01{
+  color:#fff;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.mf_txt02{
+  color:#fff;
+  font-size: 40px;
+  text-align: center;
+}
+
+.mf_wrap > div:first-of-type > .mf_txt01{
+  transform: translateX(-120px);
+}
+
+
+/* 투자정보 */
+
+.m_investment > article > h3{
+  display: none;
+}
+
+.miv_txt01{
+  margin: 50px 0px 15px 80px;
+  color:#333;
+  font-size: var(--f-size04);
+  line-height: 45px;
+}

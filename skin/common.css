@@ -9,7 +9,7 @@ header {
 }
 header:hover {background-color: var(--bg-color01);}
 header a {text-decoration: none;color: var(--f-color03);}
-header.header_sub {position: sticky; background-color: var(--bg-color01);}
+header.header_sub {position: sticky; background-color: var(--bg-color01); z-index: 50;}
 header #pcHeader {
   position: relative;
   height: 100px;
@@ -76,6 +76,8 @@ header #memberMenu a{font-size: var(--f-size02);}
 hr{margin: 0px;}
 footer {
   width: 100%;
+  background-color: #fff;
+  position: relative;
 }
 .f_top{
   position: relative;
