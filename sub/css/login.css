@@ -87,6 +87,13 @@ input[type=button]{
   margin: 50px auto 100px auto;
   display: block;
   cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+input[type=button]:hover{
+  background-color: var(--main-color);
+  /* color: var(--f-color01); */
 }
 
 div.sns_box p {
