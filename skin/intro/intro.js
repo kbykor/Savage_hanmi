@@ -10,9 +10,9 @@ $(function(){
     console.log(spos);// 대표이사 인삿말 600px, info 1500px, esg 2100px
     if(spos >= 600){
       ceoms.fadeIn(2000);
-    }if(spos >= 1000){
-      info.fadeIn(2000);
     }if(spos >= 1500){
+      info.fadeIn(2000);
+    }if(spos >= 2100){
       esg.fadeIn(2000);
     }
   });

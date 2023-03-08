@@ -10,10 +10,12 @@ $(function(){
     console.log(spos);// 대표이사 인삿말 380px, info 1200px, esg 1550px
     if(spos >= 380){
       ceoms.fadeIn(2000);
+    }if(spos >= 1000){
+      info.addClass('view_intro');
     }if(spos >= 1500){
-      info.fadeIn(2000);
-    }if(spos >= 2100){
-      esg.fadeIn(2000);
+      esg.addClass('view_intro');
+      // esg.css('opacity','1');
+      // esg.css('visibility','visible');
     }
   });
 

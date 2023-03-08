@@ -4,6 +4,14 @@ body{
   background: url(../../images/intro_bg06.png);
   background-size:auto;
 }
+header{
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0px; left: 0px;
+  background: var(--bg-color03);
+}
+
 
 /* 기업소개 1번 섹션 */
 #intro_sec01{
@@ -211,7 +219,7 @@ body{
 #intro_sec05{
   width: 100%;
   text-align: center;
-  padding: 100px 0px 890px; 
+  padding: 100px 0px; 
 }
 #intro_sec05 h2{
   font-size: var(--f-size05);

@@ -118,8 +118,12 @@ header{
 .info_txt{
   width: 50%;
   margin-top: 250px;
+  opacity: 0;
+  transition: 2s;
+}
+.info_txt.view_intro{
   animation: fadein 3s;
-  display: none;
+  animation-fill-mode: both;
 }
 @keyframes fadein{
   0% {
@@ -176,21 +180,15 @@ header{
 }
 .esg_txt{
   width: 50%;
-  animation: fadein2 3s;
-  display: none;
+  opacity: 0;
+  transition: 2s;
   text-align: right;
 }
-@keyframes fadein2{
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-
+.esg_txt.view_intro {
+  animation: fadein 3s;  
+  animation-fill-mode: both;
 }
+
 .esg_txt h2{
   position: relative;
   font-size: 4rem;
