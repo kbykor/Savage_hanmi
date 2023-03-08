@@ -11,13 +11,6 @@ body{
   background-size: auto;
 }
 
-header{
-  width: 100%;
-  height: 100px;
-  position: fixed;
-  top: 0px; left: 0px;
-  background: var(--bg-color03);
-}
 
 
 /* 기업소개 1번 섹션 */
@@ -25,6 +18,21 @@ header{
   width: 100%; height: 100vh;
   text-align: center;
   position: relative;
+  color: var(--f-color01);
+}
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.25;
+}
+.bg-video > video{
+  width: 100%; height: 110%;
+  object-fit: cover;
+  z-index: -1;
 }
 .sec01_txt{
   position: absolute;
@@ -54,7 +62,7 @@ header{
   background: linear-gradient(180deg, rgba(255, 254, 254, 0) 0%, #fff 17.29%, #fff 82.43%, rgba(255, 254, 254, 0) 99.48%);
 }
 #intro_sec02 h2{
-  font-size: 6rem;
+  font-size: 5rem;
   text-transform: uppercase;
   color: rgba(49, 27, 25, 0.1);
   /* line-height: 220px; */
@@ -62,6 +70,7 @@ header{
 .sec02_box{
   width: 70%;
   position: absolute;
+  padding: 20px 1rem;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -71,7 +80,7 @@ header{
   display: none;
 }
 .ceo_ms h3{
-  font-size: var(--f-size06);
+  font-size: var(--f-size05);
   padding: 10px 0px;
 }
 .ceo_ms p{
@@ -82,11 +91,12 @@ header{
 .ceo_ms p:first-of-type{
   font-size: var(--f-size03);
 }
-.ceo_ms img{
+.sec02_box img{
   display: inline-block;
   width: 100%;
   max-width: 100px;
-  transform: translateX(300%);
+  position: absolute;
+  bottom: 0px; right: 0px;
 }
 
 
@@ -295,7 +305,7 @@ header{
   vertical-align: text-bottom;
 }
 .tf{
-  width: 100px;
+  width: 150px;
   /* padding: 0px 20px; */
   font-size: var(--f-size02) !important;
 }
@@ -347,6 +357,7 @@ header{
   color: var(--f-color03);
   border: 1px solid var(--bg-color03);
   transition: all 0.5s;
+  font-weight: bold;
 }
 .m_btn:hover{
   color: var(--f-color01);
