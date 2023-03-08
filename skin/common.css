@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+/* 히든 */
+.hidden {display: none;}
+
 /* 헤더 */
 header {
   width: 100%;
