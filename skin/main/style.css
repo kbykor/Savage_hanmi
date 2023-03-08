@@ -442,7 +442,7 @@ i.fa-book-bookmark{
   top:20px;
 }
 
-.mf_circle > img{
+.mf_circle img{
   width:120px;
   height:120px;
   position: absolute;
@@ -464,11 +464,11 @@ i.fa-book-bookmark{
   transform: translateX(-100px);
 }
 
-.mf_wrap > div:first-of-type > .mf_txt01{
+.mf_wrap > div:first-of-type .mf_txt01{
   transform: translateX(-120px);
 }
 
-.mf_wrap > div > p::after{
+.mf_wrap > div p::after{
   content:"";
   width:10px;
   height: 120px;
@@ -478,14 +478,14 @@ i.fa-book-bookmark{
   position: absolute;
 }
 
-.mf_wrap > div:first-child > p::after{
+.mf_wrap > div:first-child p::after{
   left:50%;
   top:-150px;
 }
-.mf_wrap > div:nth-child(2) > p::after{
+.mf_wrap > div:nth-child(2) p::after{
   left:50%; top:70px;
 }
-.mf_wrap > div:last-child > p::after{
+.mf_wrap > div:last-child p::after{
   top:200px; right:130px;
 }
 
@@ -539,6 +539,11 @@ i.fa-book-bookmark{
   line-height: 60px;
 }
 
+.miv_box > table th > a{
+  font-size: var(--f-size02);
+  float: right;
+  padding: 0px 20px;
+}
 
 .miv_box > table tr td:first-of-type{
   font-size: 40px;
