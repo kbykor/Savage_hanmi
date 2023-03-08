@@ -131,23 +131,23 @@ footer {
   height: 50px;
   position: relative;
 }
-.f_right img{
+.f_right a img{
   width: 110px;
   height: 20px;
   object-fit: contain;
   display: inline-block;
 }
-.f_right img:first-child{
+.f_right a img:first-child{
   width: 140px;
 }
-.f_right img:nth-child(2){
+.f_right a img:nth-child(2){
   width: 130px;
   
 }
-.f_right img:nth-child(4){
+.f_right a img:nth-child(4){
   width: 40px;
 }
-.f_right img:last-child{
+.f_right a img:last-child{
   width: 70px;
 }
 .f_address{
