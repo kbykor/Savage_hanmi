@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="../skin/member/join.js"></script>
+  <script src="../skin/member/join.js" defer></script>
 
 </head>
 <body>
@@ -140,7 +140,7 @@
       <div class="join_agree01">
         <p class="agree_title02">홈페이지 회원 서비스 이용약관 <span class="red">*</span></p>
         <p class="agree_btn agree_tab01_btn">보기 <span >▼</span></p>
-        <div class="agree_tab01">
+        <div class="agree_tab01 agree_tab">
           <textarea name="이용약관" id="agree" cols="45" rows="20" readonly="" title="이용약관">제1조 (목적) 
 
 이 약관은 한미약품이 운영하는 웹사이트와 웹사이트에서 제공하는 온라인 컨텐츠를 이용함에 있어 회사와 이용자, 회원간의 권리와 의무, 이용조건, 책임사항 등을 규정할 목적으로 합니다.
@@ -223,8 +223,8 @@
       <!-- 개인정보수집  -->
       <div class="join_agree02">
         <p class="agree_title02">홈페이지 회원 개인정보 수집 이용 동의서 <span class="red">*</span></p>
-        <p class="agree_btn agree_tab02_btn">보기 <span>▼</span></p>
-        <div class="agree_tab02">
+        <p class="agree_btn agree_tab02_btn">보기 <span>▲</span></p>
+        <div class="agree_tab02 agree_tab">
           <textarea name="개인정보수집" id="agree02" cols="45" rows="20" readonly="" title="개인정보수집">
 개인정보처리방침 
 
@@ -325,7 +325,7 @@
       <div class="user_data_title">
         <p class="agree_title">정보 입력</p>
       </div>
-      <form name="" method="post" action="">
+      <form name="" method="post" action="" id="form">
         <fieldset>
           <legend>정보 입력</legend>          
           <div class="data_email">
@@ -353,6 +353,7 @@
           <div class="data_pw02">
             <label for="data_pw02">비밀번호 확인 <span class="red">*</span></label>
             <input type="password" name="data_pw02" id="data_pw02" placeholder="비밀번호를 한 번 더 입력해 주세요" required>
+            <p class="small confirm_password">&nbsp;</p>
           </div>
 
           <div class="data_name">
