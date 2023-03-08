@@ -15,7 +15,7 @@ body{
 
 /* 기업소개 1번 섹션 */
 #intro_sec01{
-  width: 100%; height: 100vh;
+  width: 100%; height: calc(100vh - 60px);
   text-align: center;
   position: relative;
   color: var(--f-color01);

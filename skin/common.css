@@ -121,33 +121,33 @@ footer {
 .f_nav_ul li:last-child::after{
   content: none;
 }
-.f_nav_ul > li:nth-child(2){
+.f_nav_ul li:nth-child(2) a{
   color: var(--main-color);
+  font-weight: bold;
 }
 .f_right{
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   height: 50px;
   position: relative;
 }
-.f_right img{
-  width: 110px;
+.f_right > a > img{
+  width: 120px;
   height: 20px;
-  object-fit: contain;
+  object-fit: fill;
   display: inline-block;
 }
-.f_right img:first-child{
-  width: 140px;
+.f_right a:first-child img{
+  width: 150px;
 }
-.f_right img:nth-child(2){
+.f_right a:nth-child(2) img{
   width: 130px;
-  
 }
-.f_right img:nth-child(4){
+.f_right a:nth-of-type(4) img{
   width: 40px;
 }
-.f_right img:last-child{
+.f_right a:last-of-type img{
   width: 70px;
 }
 .f_address{
