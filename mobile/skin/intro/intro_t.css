@@ -1,9 +1,16 @@
 @charset "utf-8";
 
+@media screen and (min-width:768px) and (max-width:1024px){
+
+
+
+
+
 body{
   background: url(../../images/intro_bg06.png);
-  background-size:auto;
+  background-size: auto;
 }
+
 header{
   width: 100%;
   height: 100px;
@@ -26,45 +33,50 @@ header{
 }
 .sec01_txt h2{
   font-size:var(--f-size06);
-  padding: 20px;
+  padding: 10px;
 }
 .sec01_txt h3{
   font-size: var(--f-size05);
-  padding: 20px;
+  padding: 10px;
 }
 .sec01_txt p{
   font-size: 1.25rem;
-  padding: 20px;
+  padding: 10px;
 }
 
 
 /* 기업소개 2번 섹션 */
 #intro_sec02{
-  width: 100%; height: 600px;
+  width: 100%; height: 500px;
   position: relative;
   text-align: center;
-  padding: 50px 0px; 
+  /* padding: 50px 0px;  */
   background: linear-gradient(180deg, rgba(255, 254, 254, 0) 0%, #fff 17.29%, #fff 82.43%, rgba(255, 254, 254, 0) 99.48%);
 }
 #intro_sec02 h2{
-  font-size: 120px;
+  font-size: 6rem;
   text-transform: uppercase;
   color: rgba(49, 27, 25, 0.1);
-  line-height: 220px;
+  /* line-height: 220px; */
 }
-.ceo_ms{
+.sec02_box{
+  width: 70%;
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
+}
+.ceo_ms{
+  position: relative;
+  transform: translateY(-15%);
   display: none;
 }
 .ceo_ms h3{
   font-size: var(--f-size06);
-  padding: 20px 0px;
+  padding: 10px 0px;
 }
 .ceo_ms p{
   color: #666;
-  padding: 20px 0px;
+  padding: 10px 0px;
   font-size: var(--f-size02);
 }
 .ceo_ms p:first-of-type{
@@ -72,24 +84,26 @@ header{
 }
 .ceo_ms img{
   display: inline-block;
-  width: 140px;
-  position: absolute;
-  right: -100px;
+  width: 100%;
+  max-width: 100px;
+  transform: translateX(300%);
 }
 
 
 /* 기업소개 3번 섹션 */
 #intro_sec03{
-  width: 100%;
+  width: 100%; height: 100%;
   position: relative;
-  padding: 100px 0px; 
+  padding: 50px 0px; 
 }
+
 .sec03_box{
-  width: 1200px;
-  margin: 0px auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
+  gap: 20px;
+  width: 100%; height: 100%;
+  padding: 0px 2rem;
 }
 .info_img{
   box-shadow: 10px 20px 50px 5px rgba(0, 0, 0, 0.3);  
@@ -97,19 +111,24 @@ header{
 }
 .info_img img{
   display: inline-block;
-  width: 450px;
+  width: 100%;
+  max-width: 320px;
   vertical-align: top;
 }
 .info_txt{
   width: 50%;
-  margin-top: 300px;
+  margin-top: 250px;
+  opacity: 0;
+  transition: 2s;
+}
+.info_txt.view_intro{
   animation: fadein 3s;
-  display: none;
+  animation-fill-mode: both;
 }
 @keyframes fadein{
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
   100% {
     opacity: 1;
@@ -119,7 +138,7 @@ header{
 }
 .info_txt h2{
   position: relative;
-  font-size: 96px;
+  font-size: 4rem;
   text-transform: uppercase;
   color: rgba(49, 27, 25, 0.1);
   /* top: -70px; */
@@ -133,7 +152,7 @@ header{
   padding-bottom: 30px;
   color: var(--f-color03);
   letter-spacing: 0.05rem;
-  line-height: 30px;
+  line-height: 20px;
   font-weight: bold;
 }
 .info_txt p span{
@@ -146,42 +165,33 @@ header{
   border: 1px solid#333;
 }
 
-
-
 /* 기업소개 4번 섹션 */
 #intro_sec04{
-  width: 100%;
+  width: 100%; height: 100%;
   position: relative;
-  padding: 100px 0px; 
+  padding: 50px 0px; 
 }
 .sec04_box{
-  width: 1200px;
-  margin: 0px auto;
   display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
+  justify-content: space-around;
   flex-wrap: wrap;
+  gap: 20px;
+  padding: 0px 2rem;
 }
 .esg_txt{
   width: 50%;
-  animation: fadein2 3s;
-  display: none;
+  opacity: 0;
+  transition: 2s;
   text-align: right;
 }
-@keyframes fadein2{
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-
+.esg_txt.view_intro {
+  animation: fadein 3s;  
+  animation-fill-mode: both;
 }
+
 .esg_txt h2{
   position: relative;
-  font-size: 96px;
+  font-size: 4rem;
   text-transform: uppercase;
   color: rgba(49, 27, 25, 0.1);
 }
@@ -206,12 +216,14 @@ header{
   border: 1px solid#333;
 }
 .esg_img{
-  margin-top: 300px;
+  margin-top: 350px;
+  box-shadow: 10px 20px 50px 5px rgba(0, 0, 0, 0.3); 
 } 
 .esg_img img{
-  width: 450px;
-  display: inline-block;
-  box-shadow: 10px 20px 50px 5px rgba(0, 0, 0, 0.3);  
+  width: 100%;
+  max-width: 320px;
+  vertical-align: top;
+  display: inline-block; 
 }
 
 
@@ -219,7 +231,7 @@ header{
 #intro_sec05{
   width: 100%;
   text-align: center;
-  padding: 100px 0px; 
+  padding: 50px 0px; 
 }
 #intro_sec05 h2{
   font-size: var(--f-size05);
@@ -228,10 +240,10 @@ header{
 .sec05_p{
   font-size: var(--f-size03);
   color: var(--f-color03);
-  padding: 50px 0px;
+  padding: 30px 0px;
 }
 .tab_map{
-  width: 1200px;
+  width: 90%;
   margin: 0px auto;
   position: relative;
 }
@@ -239,19 +251,19 @@ header{
   display: flex;
 }
 .tab_map ul li{
-  width: 25%; height: 60px;
+  width: 25%; height: 50px;
   text-align: center;
   background: var(--bg-color01);
   box-sizing: border-box;
-  line-height: 60px;
+  line-height: 50px;
 }
 .tab_map ul li a{
   display: block;
-  line-height: 60px;
+  line-height: 50px;
   font-size: var(--f-size02);
 }
 .tab_map .con{
-  width: 100%; height: 540px;
+  width: 100%; height: 450px;
   position: absolute;
   left: 0px;
 }
@@ -265,13 +277,13 @@ header{
   width: 100%;
   position: relative;
   bottom: 0px; left: 0px;
-  height: 150px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .con_sub p{
-  font-size: var(--f-size03);
+  font-size: 1.25rem;
   line-height: 25px;
   color: var(--f-color03);
   margin: 30px 0px;
@@ -283,27 +295,30 @@ header{
   vertical-align: text-bottom;
 }
 .tf{
-  width: 150px;
+  width: 100px;
   /* padding: 0px 20px; */
   font-size: var(--f-size02) !important;
 }
 .tf b{
   font-weight: bold;
-  font-size: var(--f-size03);
+  font-size: 1.25rem;
 }
 .con_sub_num{
   display: flex;
   align-items: center;
 }
+.con_sub_num p img{
+  width: 50px; height: 50px;
+}
 .con_sub_bus{
   width: 100%;
-  height: 100px;
+  height: 70px;
   display: flex;
   align-items: center;
   gap: 20px;
 }
 .con_sub_bus img{
-  width: 70px; height: 70px;
+  width: 50px; height: 50px;
 }
 .con_sub_bus P{
   font-size: var(--f-size02);
@@ -312,10 +327,8 @@ header{
   text-align: left;
 }
 .con_sub_bus P b{
-  font-size: var(--f-size03);
+  font-size: 1.25rem;
 }
-
-
 
 .act{
   border-bottom: 2px solid var(--main-color);
@@ -365,4 +378,8 @@ header{
   100% {
     transform:translateX(0);
   }
+}
+
+
+
 }
