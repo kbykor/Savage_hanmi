@@ -4,7 +4,7 @@
   color:var(--main-color);
 }
 .m_txt01{
-  margin: 50px 0px 15px 20px;
+  margin: 20px 0px 15px 20px;
   color:#fff;
   font-size: var(--f-size02);
   line-height: 25px;
@@ -29,7 +29,7 @@ section > hr{
 
 /* -----------------메인슬라이드----------------------------- */
 .m_slide{
-  height:100vh;
+  height:calc(100vh - 60px);
   position:relative;
   background: #ffcccc;
 }
@@ -39,17 +39,19 @@ section > hr{
 
 .ms_box{
   width:300%;
+  height: 100%;
   display: flex;
 }
 
 .ms_box > li{
   width:100%;
+  height: 100%;
   position:relative;
+  overflow: hidden;
 }
 
 .ms_box > li img{
-  width:100%;
-  max-height: 320px;
+  height:100%;
   filter: brightness(50%);
   transform: scale(4) translateX(60px);
 }
@@ -149,7 +151,7 @@ section > hr{
 /* 제품슬라이드 */
 .m_product{
   position: relative;
-  height:550px;
+  height:600px;
 }
 
 .m_product > article {
@@ -218,7 +220,7 @@ transform:translate(-10px,-212px);
 
 .p_info{
   width:100px;
-  height: 250px;
+  height: 150px;
   text-align: left;
   position: absolute;
   right: 10px;
@@ -253,11 +255,11 @@ transform:translate(-10px,-212px);
   border:1px solid #333;
   border-radius: 50%;
   position:absolute;
-  top:55%;
+  bottom:10%;
 }
 
 .p_lbtn{
-  left:5%;
+  left:10%;
 }
 
 .p_lbtn::after{
@@ -287,7 +289,22 @@ transform:translate(-10px,-212px);
 }
 
 .p_rbtn{
-  right:5%;
+  right:10%;
+}
+
+.p_page{
+  position: absolute;
+  bottom:10%;
+  font-size: var(--f-size05);
+  margin:0px auto;
+  font-weight:bold;
+  transform: translateX(-50%);
+}
+
+.pg_border01{
+  color:#fff;
+  -webkit-text-stroke:1px #333;
+  font-weight: bold;
 }
 
 /* 3sec 한미소개 */
@@ -314,7 +331,7 @@ transform:translate(-10px,-212px);
   flex-wrap: wrap;
   justify-content: space-around;
   position: absolute;
-  top:40%; left:50%;
+  top:45%; left:50%;
   transform: translate(-50%, -10%);
   z-index: 3;
 }
@@ -322,26 +339,52 @@ transform:translate(-10px,-212px);
   text-align: center;
   color:#fff;
   width:50%;
+  padding-bottom: 50px;
 }
+
+.mi_wrap > li:first-child::after{
+  content:"";
+  width:1px;
+  height:200px;
+  display: block;
+  background: #fff;
+  position: absolute;
+  left:50%; top:-20px;
+}
+
+.mi_wrap > li:last-child::after{
+  content:"";
+  width:1px;
+  height:200px;
+  display: block;
+  background: #fff;
+  position: absolute;
+  left:50%; bottom:80px;
+}
+
+
 .mi_wrap > li > i{
-  font-size: 60px;
-  margin-bottom: 30px;
+  font-size: var(--f-size03);
+  margin-bottom: 25px;
 }
 .mi_wrap > li > p:first-of-type{
-  font-size: 20px;
-  margin-bottom:50px
+  font-size: 16px;
+  margin-bottom:10px
 }
 .mi_wrap > li > p:nth-of-type(2){
-  font-size: 48px;
-  margin-bottom: 50px;
+  font-size: 16px;
+  margin-bottom: 20px;
   font-weight: bold;
 }
 .mi_wrap > li > p:last-of-type{
   font-size: var(--f-size02);
+  margin-bottom: 50px;
 }
 .mi_size01{
-  font-size: 60px;
+  font-size: 48px;
 }
+
+
 
 /* 아이콘 */
 i.fa-fort-awesome{
@@ -382,6 +425,10 @@ i.fa-book-bookmark{
   position: relative;
   margin:0px auto;
   padding-top:50px;
+}
+
+.mf_wrap > div{
+  padding-bottom: 50px;
 }
 
 .mf_circle{
@@ -434,6 +481,7 @@ i.fa-book-bookmark{
   transform: translateY(-160px);
 }
 
+
 /* 투자정보 */
 
 .m_investment > h2{
@@ -455,17 +503,16 @@ i.fa-book-bookmark{
 }
 
 .miv_box{
-  width:290px;
+  width:95%;
   height:150px;
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-  margin-top:35px;
+  margin: 35px auto 100px auto;
 }
 
 .miv_box > table{
-  border-radius: 30px;
-  width:300px;
+  width:100%;
   height:150px;
 }
 
@@ -482,7 +529,7 @@ i.fa-book-bookmark{
 .miv_box > table th > a{
   font-size: var(--f-size02);
   float: right;
-  padding-right:40px;
+  padding-right:30px;
   color:#fff;
 }
 
@@ -505,9 +552,10 @@ i.fa-book-bookmark{
 }
 
 .m_news, .m_ir{
-  width:380px;
-  padding:0px 10px;
+  width:100%;
+  padding:0px 20px;
   transform: translateY(-50px);
+  margin-bottom: 50px;
 }
 
 
@@ -537,7 +585,7 @@ i.fa-book-bookmark{
   white-space:nowrap;
   overflow:hidden;
   display: block;
-  width:280px;
+  width:70%;
 }
 
 .miv_wrap ul>li > a > span > span{
