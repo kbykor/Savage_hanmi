@@ -241,14 +241,14 @@ body{
 #intro_sec05{
   width: 100%;
   text-align: center;
-  padding: 50px 0px; 
+  padding: 50px 0px 700px; 
 }
 #intro_sec05 h2{
-  font-size: var(--f-size05);
+  font-size: var(--f-size04);
   color: var(--f-color03);
 }
 .sec05_p{
-  font-size: var(--f-size03);
+  font-size: var(--f-size02);
   color: var(--f-color03);
   padding: 30px 0px;
 }
@@ -326,17 +326,35 @@ body{
   display: flex;
   align-items: center;
   gap: 20px;
+  margin: 20px 0px;
 }
-.con_sub_bus img{
-  width: 50px; height: 50px;
+.bus, .metro{
+  display: flex;
+  width: 100%;
+  gap: 1rem;
 }
-.con_sub_bus P{
+.bus P{
   font-size: var(--f-size02);
   color: var(--f-color03);
   line-height: 25px;
   text-align: left;
 }
-.con_sub_bus P b{
+.bus img{
+  width: 50px; height: 50px;
+}
+.bus P b{
+  font-size: 1.25rem;
+}
+.metro P{
+  font-size: var(--f-size02);
+  color: var(--f-color03);
+  line-height: 25px;
+  text-align: left;
+}
+.metro img{
+  width: 50px; height: 50px;
+}
+.metro P b{
   font-size: 1.25rem;
 }
 
