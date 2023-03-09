@@ -1,9 +1,7 @@
 let list_recruiter = document.querySelectorAll('.recruiter_list_content > ul > li'); // 채용공고들
 let recruiterModal = document.querySelector('#recruiterModal'); // dialog 모달
-let recruiter_top, recruiterWrite; // 모달 헤더, 모달 헤더 작성하기 버튼
+let recruiter_top, recruiterWrite, recruiter_write; // 모달 헤더, 모달 헤더 작성하기 버튼, 모달 작성하기 폼
 const request = new XMLHttpRequest(); // 리퀘스트 가져오는 객체
-
-
 
 for(recruiter of list_recruiter){
   recruiter.addEventListener('click', () => {
@@ -19,11 +17,32 @@ for(recruiter of list_recruiter){
         request.send();
         request.onload = () => {
           recruiterModal.innerHTML = request.responseText;
+          recruiter_write = document.querySelector('.recruiter_write');
+          recruiter_write.querySelector('#fileDoc').addEventListener('change', function() {
+            recruiter_write.querySelector('.file_doc_label > div').innerHTML = this.files[0].name;
+          });
+
+          document.querySelector('.recruiter_submit').addEventListener('click', function(){
+            recruiter_write.querySelector('.recruiter_submit').click();
+          });
         };
         recruiterModal.scrollTop = 0;
       });
     };
   });
+
+  if(recruiter.querySelector('.active_view') != undefined){
+    console.log(recruiter.querySelector('.active_view'));
+    recruiter.querySelector('.active_view').addEventListener('click', (e) => {
+      e.stopPropagation();
+      request.open('GET', './recruiter_modal_view.html');
+      request.send();
+      request.onload = () => {
+        recruiterModal.innerHTML = request.responseText;
+        recruiterModal.showModal();
+      }
+    });
+  }
 }
 
 recruiterModal.addEventListener('click', (event) => {
