@@ -1,0 +1,138 @@
+@media screen and (max-width:767px) {
+
+
+  footer {
+    width: 100%; height: 100%;
+    max-width: 1024px;
+    background-color: #fff;
+    position: relative;
+  }
+  hr{
+    margin: 0px;
+  }
+  .view_pc{
+    margin: 0px auto;
+    text-align: center;
+    padding: 40px 0px;
+    border-top: 1px solid var(--bg-color02);
+  }
+  .view_pc a{
+    font-size: var(--f-size02);
+    padding: 10px 40px;
+    border: 2px solid var(--bg-color02);
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  .f_top{
+    position: relative;
+    max-width: 1024px;
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .f_left{
+    display: flex ;
+    padding: 10px;
+  }
+  .f_left h1 a img{
+    width: 70px;
+    height: 30px;
+    margin-right: 10px;
+    display: inline-block;
+    object-fit: fill;
+  }
+  .f_nav_ul{
+    width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .f_nav_ul li{
+    padding: 10px;
+    font-size: var(--f-size01);
+    position: relative;
+  }
+  .f_nav_ul li::after{
+    width: 1px; height: 1rem;
+    margin-left: 10px;
+    background: #ccc;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .f_nav_ul li:last-child::after{
+    content: none;
+  }
+  .f_nav_ul li:nth-child(2) a{
+    color: var(--main-color);
+    font-weight: bold;
+  }
+  .f_right{
+    display: none;
+  }
+  .f_right > a > img{
+    width: 100px;
+    height: 1rem;
+    object-fit: fill;
+    display: inline-block;
+  }
+  .f_right a:first-child img{
+    width: 110px;
+  }
+  .f_right a:nth-child(2) img{
+    width: 110px;
+  }
+  .f_right a:nth-of-type(4) img{
+    width: 40px;
+  }
+  .f_right a:last-of-type img{
+    width: 60px;
+  }
+  .fam_box select{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-size: var(--f-size01);
+    font-weight: bold;
+  }
+  #han_fam option{
+    text-align: center;
+  }
+  #han_fam option[value="한미사이언스"]{
+    background-image: url(../images/aff01.png);
+  }
+  .f_address{
+    width: 100%;
+    margin: 0px auto;
+    padding: 20px 0px;
+    text-align: center;
+  }
+  .f_address address p{
+    position: relative;
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: var(--f-size01);
+  }
+  .f_address address p span{
+    margin-right: 20px;
+  }
+  .f_address address p span::after{
+    content: '';
+    width: 1px;
+    height: var(--f-size01);
+    margin: 0px 10px;
+    background: #ccc;
+    position: absolute;
+  }
+  .f_address address p span:last-child::after{
+    content: none;
+  }
+
+
+}

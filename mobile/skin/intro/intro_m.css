@@ -16,7 +16,7 @@
 
 /* 기업소개 1번 섹션 */
 #intro_sec01{
-  width: 100%; height: 100vh;
+  width: 100%; height: calc(100vh - 60px);
   text-align: center;
   position: relative;
   color: var(--f-color01);
@@ -42,6 +42,7 @@
   top: 50%; 
   transform: translateY(-50%);
   text-align: center;
+  text-shadow: 2px 2px 2px rgba(184, 184, 184, .5);
 }
 .sec01_txt h2{
   font-size:var(--f-size05);
@@ -80,20 +81,20 @@
 }
 .ceo_ms{
   position: relative;
-  transform: translateY(-15%);
+  transform: translateY(-20%);
   display: none;
 }
 .ceo_ms h3{
-  font-size: var(--f-size05);
+  font-size: var(--f-size04);
   padding: 5px 0px;
 }
 .ceo_ms p{
   color: #666;
-  padding: 5px 0px;
+  padding: 10px 0px;
   font-size: var(--f-size01);
 }
 .ceo_ms p:first-of-type{
-  font-size: var(--f-size03);
+  font-size: 1.24rem;
 }
 .sec02_box img{
   position: absolute;
@@ -237,14 +238,14 @@
 #intro_sec05{
   width: 100%;
   text-align: center;
-  padding: 50px 0px; 
+  padding: 50px 0px 800px; 
 }
 #intro_sec05 h2{
-  font-size: var(--f-size05);
+  font-size: var(--f-size04);
   color: var(--f-color03);
 }
 .sec05_p{
-  font-size: var(--f-size03);
+  font-size: 1.25rem;
   color: var(--f-color03);
   padding: 30px 0px;
 }
@@ -320,22 +321,43 @@
 }
 .con_sub_bus{
   width: 100%;
-  padding-bottom: 20px;
-  display: flex;
-  align-items: center;
+  margin: 20px 0px;
+  line-height: 20px;
 }
-.con_sub_bus img{
+.bus, .metro{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  margin: 0px auto;
+}
+.bus img{
   width: 50px; height: 50px;
 }
-.con_sub_bus P{
+.bus P{
   font-size: var(--f-size01);
   color: var(--f-color03);
   line-height: 25px;
   text-align: left;
 }
-.con_sub_bus P b{
+.bus P b{
   font-size: 1rem;
 }
+.metro img{
+  width: 50px; height: 50px;
+}
+.metro P{
+  font-size: var(--f-size01);
+  color: var(--f-color03);
+  line-height: 25px;
+  text-align: left;
+}
+.metro P b{
+  font-size: 1rem;
+}
+
+
+
 
 .act{
   border-bottom: 2px solid var(--main-color);
