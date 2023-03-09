@@ -98,6 +98,7 @@
   .f_right a:last-of-type img{
     width: 60px;
   }
+  .fam_box{display: none;}
   .f_address{
     width: 100%;
     margin: 0px auto;

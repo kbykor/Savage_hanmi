@@ -74,11 +74,7 @@
     font-weight: bold;
   }
   .f_right{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    height: 50px;
-    position: relative;
+    display: none;
   }
   .f_right > a > img{
     width: 100px;
@@ -98,10 +94,23 @@
   .f_right a:last-of-type img{
     width: 60px;
   }
+  .fam_box select{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-size: var(--f-size01);
+    font-weight: bold;
+  }
+  #han_fam option{
+    text-align: center;
+  }
+  #han_fam option[value="한미사이언스"]{
+    background-image: url(../images/aff01.png);
+  }
   .f_address{
     width: 100%;
     margin: 0px auto;
-    padding: 10px 0px;
+    padding: 20px 0px;
     text-align: center;
   }
   .f_address address p{
