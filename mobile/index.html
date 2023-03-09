@@ -9,8 +9,11 @@
   <link rel="stylesheet" href="./skin/reset.css">
   <link rel="stylesheet" href="./skin/main/style.css">
   <link rel="stylesheet" href="./skin/base.css">
+  <link rel="stylesheet" href="./skin/common.css" type="text/css">
   <!-- 폰트어썸 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <script src="./skin/prefixfree.min.js"></script>
+  <script src="./skin/common.js" defer></script>
   <!-- css3추가속성시 접두사 자동으로 붙여주는 스크립트 -->
   <script src="./script/prefixfree.min.js"></script>
   <!-- 제이쿼리 -->
@@ -21,6 +24,107 @@
   <script src="./skin/main/main.js"></script>
 </head>
 <body>
+  <header>
+    <input type="checkbox" name="menuCheck" id="menuCheck">
+    <nav id="mHeader">
+      <h1 id="logo">
+        <a href="./index.html" title="메인으로 돌아가기">
+          <img src="./images/Logo_s.png" alt="logo">
+        </a>
+      </h1>
+      <label class="hamburger" id="mMenu" for="menuCheck">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </label>
+    </nav>
+    <div class="gnb_wrap">
+      <ul id="gnb">
+        <li>
+          <a href="#none" title="기업">기업</a>
+          <ul class="lnb">
+            <li>
+              <a href="#none" title="인사말">인사말</a>
+            </li>
+            <li>
+              <a href="#none" title="한미소개">한미소개</a>
+            </li>
+            <li>
+              <a href="#none" title="오시는 길">오시는 길</a>
+            </li>
+            <li>
+              <a href="#none" title="ESG">ESG</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#none" title="제품">제품</a>
+          <ul class="lnb">
+            <li>
+              <a href="#none" title="제품소식">제품소식</a>
+            </li>
+            <li>
+              <a href="#none" title="제품검색">제품검색</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#none" title="연구">연구</a>
+          <ul class="lnb">
+            <li>
+              <a href="#none" title="소개">소개</a>
+            </li>
+            <li>
+              <a href="#none" title="R&D 네트워크">R&D 네트워크</a>
+            </li>
+            <li>
+              <a href="#none" title="파이프라인">파이프라인</a>
+            </li>
+            <li>
+              <a href="#none" title="기술">기술</a>
+            </li>
+            <li>
+              <a href="#none" title="Open Innovation">Open Innovation</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#none" title="투자">투자</a>
+          <ul class="lnb">
+            <li>
+              <a href="#none" title="주가정보">주가정보</a>
+            </li>
+            <li>
+              <a href="#none" title="재무정보">재무정보</a>
+            </li>
+            <li>
+              <a href="#none" title="IR센터">IR센터</a>
+            </li>
+            <li>
+              <a href="#none" title="공시정보">공시정보</a>
+            </li>
+            <li>
+              <a href="#none" title="경영진">경영진</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#none" title="채용">채용</a>
+        </li>
+      </ul>
+      <ul id="memberMenu">
+        <li>
+          <a href="#none" title="로그인">로그인</a>
+        </li>
+        <li>
+          <a href="#none" title="회원가입">회원가입</a>
+        </li>
+        <li>
+          <a href="#none" title="고객센터">고객센터</a>
+        </li>
+      </ul>
+    </div>
+  </header>
   <main>
     <!-- 1sec_슬라이드 -->
     <section class="m_slide">
@@ -82,7 +186,7 @@
           </a>
         </li>
       </ul>
-      <p class="ms_scroll"><img src="./images/main_scroll.png" alt="스크롤"></p>
+      <!-- <p class="ms_scroll"><img src="./images/main_scroll.png" alt="스크롤"></p> -->
     </section>
 
     <!-- 2sec 제품소개 -->
@@ -195,6 +299,7 @@
     </div>
       <span class="p_lbtn">&nbsp;</span>
       <span class="p_rbtn">&nbsp;</span>
+      <span class="p_page"><span class="pg_border01">05</span>/05</span>
       </article>
     </section>
 
@@ -318,20 +423,6 @@
             </a>
           </li>
 
-          <li>
-            <a href="#" title="뉴스4">
-              <span>“한미약품 로수젯, 심혈관 질환 있는 ‘당뇨병 환자’ LDL-C 관리에 탁월”</span>
-              <span>01-17</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" title="뉴스5">	
-              <span>한미약품그룹 ‘새로운 50년, Global 한미!’ 기치로 새해 힘찬 출발</span>
-              <span>01-02</span>
-            </a>
-          </li>
-
         </ul>
 
       </div>
@@ -356,18 +447,6 @@
             <a href="#" title="IR">
               <span>2022년 4분기 기업설명회</span>
               <span>11-03</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" title="IR">
-              <span>2022년 3분기 실적발표</span>
-              <span>11-01</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" title="IR">
-              <span>2022년 2분기 실적발표</span>
-              <span>07-19</span>
             </a>
           </li>
         </ul>
