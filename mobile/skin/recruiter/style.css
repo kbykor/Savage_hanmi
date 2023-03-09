@@ -1,0 +1,347 @@
+@charset "utf-8";
+
+.recruiter_title {
+  background-image: url('../../images/recruiter_bg.png');
+  background-position: center top;
+  background-size: cover;
+  position: relative;
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center; align-items: center;
+  text-align: center;
+}
+.recruiter_title_content {
+  color: var(--f-color01);
+  transform: translateY(-100px);
+}
+.recruiter_title_content > h2 {font-size: var(--f-size05);margin-bottom: 1rem;}
+.recruiter_title_content > h3 {font-size: var(--f-size06);margin-bottom: 1.5rem;}
+.recruiter_title_content > p {font-size: var(--f-size03);line-height: 28px;display: none;}
+
+.recruiter_list {
+  position: relative;
+  top: -170px;
+  margin: 0 auto;
+  padding: 90px 0 50px;
+  width: 100%; max-width: 1200px;
+  background-color: var(--bg-color01);
+}
+.recruiter_list_content {
+  padding: 0 24px;
+}
+.recruiter_list_content > h3 {
+  font-size: var(--f-size04);
+  text-align: center;
+}
+
+.recruiter_list_content_nav {
+  position: absolute;
+  top: 20px; left: 24px;
+  display: flex; align-items: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  gap: 0.25rem;
+}
+.recruiter_list_content_nav > a > img {
+  margin-right: 0.75rem;
+}
+.recruiter_list_content_nav > a:nth-of-type(3) {
+  color:var(--main-color);
+}
+
+.recruiter_list_content > ul {
+  width: 100%; max-width: 984px;
+  margin: 24px auto 0;
+  padding: 20px 0 0;
+  border-top: 3px solid #000;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+.recruiter_list_content > ul > li {
+  width: 100%; max-width: 500px;
+  height: 220px;
+  position: relative;
+  border: 1px solid #ddd;
+  padding: 36px 20px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: .5s ease;
+  cursor: pointer;
+}
+.recruiter_list_content > ul > li:hover {border: 1px solid #333;}
+.recruiter_list_content > ul > li .active_view {
+  position: absolute;
+  top:30px; right: 15px;
+  font-size: var(--f-size01);
+  color:var(--f-color01);
+  line-height: 24px;
+  border-radius: 24px;
+  padding: 0 12px;
+  background-color: #000;
+}
+
+.recruiter_list_content > ul > li > p:nth-of-type(1), .recruiter_list_content > ul > li > p:nth-of-type(2), .recruiter_list_content > ul > li > p:nth-of-type(3) {
+  font-size: var(--f-size02);
+  letter-spacing: 0.5px;
+  color: #666;
+}
+.recruiter_list_content > ul > li > p:nth-of-type(2) {font-weight: 600;}
+.recruiter_list_content > ul > li > p:nth-of-type(3) {display: flex;align-items: center;gap: 20px;}
+.recruiter_list_content > ul > li > p:nth-of-type(3) > span:nth-of-type(2) {font-size: var(--f-size01);}
+.recruiter_list_content > ul > li > .cate_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+.recruiter_list_content > ul > li > .cate_list > li {
+  color: var(--f-color01);
+  font-size: var(--f-size01);
+  line-height: 24px;
+  padding: 0 12px;
+  background-color: #888;
+  border-radius: 12px;
+}
+.recruiter_list_content > ul > li > .cate_list > li:first-of-type {
+  background-color: var(--main-color);
+  font-weight: 600;
+}
+
+/* 채용공고 모달 */
+::backdrop {
+  background-color: rgba(0,0,0,0.7);
+}
+#recruiterModal {
+  top: 0; left: 50%;
+  width: 100%; max-width: 824px;
+  height: 100%; max-height: 100%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  overflow-y: scroll;
+}
+
+#recruiterModal .emp {
+  color:var(--main-color);
+  font-weight: 600;
+}
+#recruiterModal .recruiter_top {
+  position: sticky;
+  top: 0; left: 0;
+  display: flex;
+  padding-left: 40px;
+  width: 100%; height: 0;
+  background-color: #fff;
+  flex-wrap: wrap;
+  justify-content: space-between; align-items: center;
+  overflow: hidden;
+  transition: .3s;
+  z-index: 1;
+}
+#recruiterModal .recruiter_top > a {
+  display: flex;
+  justify-content: center; align-items: center;
+  width: 200px; height: 100%;
+  color: var(--f-color01);
+  font-size: var(--f-size03);
+  background-color: #000;
+  outline: none;
+}
+#recruiterModal > .recuiter_wrap {
+  position: absolute;
+  top: 0; left: 0;
+  min-width: 100%; min-height: calc(100% - 100px);
+  padding: 50px 24px 0;
+}
+#recruiterModal > .recuiter_wrap > .title_sub {padding-bottom: 12px;}
+#recruiterModal > .recuiter_wrap > h2 {
+  font-size: var(--f-size04);
+  padding-bottom: 1rem;
+}
+#recruiterModal > .recuiter_wrap > h2:first-of-type {padding-bottom: 40px;}
+#recruiterModal > .recuiter_wrap > h2:not(:first-of-type), #recruiterModal > .recuiter_wrap.write > h2 , #recruiterModal > .recuiter_wrap.view > h2 {
+  border-bottom: 2px solid #000;
+  margin-bottom: 12px;
+  padding-left: 5px;
+  padding-bottom: 1rem;
+}
+#recruiterModal > .recuiter_wrap > .recruiter_info {
+  width: 100%; height: 100px;
+  display: flex;
+  justify-content: space-between; align-items: center;
+  padding: 0 30px;
+  margin-bottom: 40px;
+  border:3px solid #000;
+}
+#recruiterModal > .recuiter_wrap > .recruiter_info > p:first-of-type {font-size: var(--f-size03);}
+#recruiterModal > .recuiter_wrap > .recruiter_info > p:last-of-type {font-size: var(--f-size02);}
+#recruiterModal > .recuiter_wrap > pre {
+  margin-bottom: 40px;
+  font-size: var(--f-size02);
+}
+#recruiterModal > .recuiter_wrap > pre img {display: block;max-width: 100%;}
+
+/* 모달 작성하기 */
+#recruiterModal .recruiter_top.write {
+  position: relative;
+  height:100px;
+  border-bottom: 3px solid #000;
+}
+#recruiterModal > .recuiter_wrap.write {
+  top: 100px;
+}
+#recruiterModal > .recuiter_wrap.write .recruiter_table {
+  width: 100%; max-width: 800px;
+  margin: 30px auto;
+}
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr {
+  display: flex;
+  justify-content: space-between; align-items: center;
+  flex-wrap: wrap;
+}
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > th {font-size: 1.25rem;}
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > td input,
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > td .file_doc_label,
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > td textarea {
+  width: 650px; min-height: 50px;
+  padding: 5px;
+  border: 1px solid #000;
+}
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > td textarea {
+  height: 200px;
+  resize: none;
+}
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > td input[type=file] {display: none;}
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > td .file_doc_label {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > td .file_doc_label::before {
+  content: '파일 첨부';
+  display: flex;
+  justify-content: center; align-items: center;
+  position: absolute;
+  top:0;right:0;
+  width: 30%; height: 100%;
+  background-color: var(--bg-color03);
+  color: var(--f-color01);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+/* 모달 상세보기 */
+#recruiterModal .recruiter_top.view {
+  position: relative;
+  height:100px;
+  border-bottom: 3px solid #000;
+}
+#recruiterModal > .recuiter_wrap.view {
+  top: 100px;
+}
+#recruiterModal > .recuiter_wrap.view .recruiter_table {
+  width: 100%; max-width: 800px;
+  margin: 30px auto;
+}
+#recruiterModal > .recuiter_wrap.view .recruiter_table > tbody {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+#recruiterModal > .recuiter_wrap.view .recruiter_table > tbody > tr {
+  display: flex;
+  justify-content: space-between; align-items: center;
+  flex-wrap: wrap;
+}
+#recruiterModal > .recuiter_wrap.view .recruiter_table > tbody > tr > th {font-size: 1.25rem;}
+#recruiterModal > .recuiter_wrap.view .recruiter_table > tbody > tr > td input,
+#recruiterModal > .recuiter_wrap.view .recruiter_table > tbody > tr > td .file_doc_label,
+#recruiterModal > .recuiter_wrap.view .recruiter_table > tbody > tr > td pre {
+  font-family: 'NanumBarunGothic', 'NanumSquare', '맑은고딕', arial, sans-serif;
+  font-size: var(--f-size02);
+  width: 650px; min-height: 50px;
+  padding: 5px;
+  border: 1px solid #000;
+  border-color: transparent transparent #000 transparent;
+  outline: none;
+}
+#recruiterModal > .recuiter_wrap.view .recruiter_table > tbody > tr > td textarea {
+  height: 200px;
+  resize: none;
+}
+#recruiterModal > .recuiter_wrap.view .recruiter_table > tbody > tr > td input[type=file] {display: none;}
+#recruiterModal > .recuiter_wrap.view .recruiter_table > tbody > tr > td .file_doc_label {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* 채용 리스트 media */
+@media screen and (min-width:660px) and (max-width:1024px) {
+  .recruiter_list_content > ul {
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+  }
+  @media screen and ((min-width:842px)) {
+    #recruiterModal {
+      top: 36px;
+      height: calc(100% - 72px);
+    }
+  }
+}
+@media screen and (max-width:706px) {
+  .recruiter_list_content > ul {
+    grid-template-columns: repeat(1, minmax(300px, 500px));
+    justify-content: center;
+  }
+  .recruiter_title_content > h2 {font-size: var(--f-size04);margin-bottom: 1rem;}
+  .recruiter_title_content > h3 {font-size: var(--f-size03);margin-bottom: 1.5rem;}
+  .recruiter_list_content_nav {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #recruiterModal .recruiter_top{
+    min-height: 50px;
+    padding-left: 0;
+  }
+  #recruiterModal .recruiter_top > div{
+    position: relative;
+    width: 100%;
+    line-height: 44px;
+    text-indent: 24px;
+  }
+  #recruiterModal .recruiter_top > a {
+    width: 100%; height: 53px;
+  }
+  #recruiterModal > .recuiter_wrap > .recruiter_info {
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+  }
+  .recruiter_close {
+    position: absolute;
+    top: 4px; right: 8px;
+    width: 32px; height: 32px;
+    outline: none;
+  }
+  .recruiter_close > span {
+    width: 100%; height: 3px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+  }
+  .recruiter_close > span:nth-of-type(1) {
+    top: 16px; transform: rotate(-45deg);
+  }
+  .recruiter_close > span:nth-of-type(2) {
+    bottom: 13px; transform: rotate(45deg);
+  }
+}
