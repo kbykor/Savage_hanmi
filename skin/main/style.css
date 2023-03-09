@@ -160,7 +160,6 @@ section > hr{
   font-size: 30px;
   margin:0px 10px;
   transform: translateY(5px);
-  color:
 }
 
 .ms_search > li i.fa-magnifying-glass{
@@ -670,4 +669,3 @@ i.fa-book-bookmark{
   background: #fff;
   z-index: 1001;
 }
-
