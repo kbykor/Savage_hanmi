@@ -23,3 +23,13 @@ for(mnu in gnbMnus){ // gnb list
     });
   }
 }
+
+
+$(function(){
+  $('.fam_select').hide();
+  $('#FS').click(function(){
+    // $(this).hide();
+    $('.fam_select').slideToggle();
+  });
+
+});
