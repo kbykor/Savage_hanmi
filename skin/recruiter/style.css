@@ -117,6 +117,7 @@
   background-color: #fff;
   overflow-y: scroll;
 }
+
 #recruiterModal .emp {
   color:var(--main-color);
   font-weight: 600;
@@ -146,6 +147,7 @@
 #recruiterModal > .recuiter_wrap {
   position: absolute;
   top: 0; left: 0;
+  min-width: 100%; min-height: calc(100% - 100px);
   padding: 50px 50px 0;
 }
 #recruiterModal > .recuiter_wrap > .title_sub {padding-bottom: 12px;}
@@ -154,10 +156,11 @@
   padding-bottom: 1rem;
 }
 #recruiterModal > .recuiter_wrap > h2:first-of-type {padding-bottom: 40px;}
-#recruiterModal > .recuiter_wrap > h2:not(:first-of-type) {
+#recruiterModal > .recuiter_wrap > h2:not(:first-of-type), #recruiterModal > .recuiter_wrap.write > h2 , #recruiterModal > .recuiter_wrap.view > h2 {
   border-bottom: 2px solid #000;
   margin-bottom: 12px;
   padding-left: 5px;
+  padding-bottom: 1rem;
 }
 #recruiterModal > .recuiter_wrap > .recruiter_info {
   width: 100%; height: 100px;
@@ -183,4 +186,96 @@
 }
 #recruiterModal > .recuiter_wrap.write {
   top: 100px;
+}
+#recruiterModal > .recuiter_wrap.write .recruiter_table {
+  width: 100%; max-width: 800px;
+  margin: 30px auto;
+}
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr {
+  display: flex;
+  justify-content: space-between; align-items: center;
+  flex-wrap: wrap;
+}
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > th {font-size: 1.25rem;}
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > td input,
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > td .file_doc_label,
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > td textarea {
+  width: 650px; min-height: 50px;
+  padding: 5px;
+  border: 1px solid #000;
+}
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > td textarea {
+  height: 200px;
+  resize: none;
+}
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > td input[type=file] {display: none;}
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > td .file_doc_label {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > td .file_doc_label::before {
+  content: '파일 첨부';
+  display: flex;
+  justify-content: center; align-items: center;
+  position: absolute;
+  top:0;right:0;
+  width: 30%; height: 100%;
+  background-color: var(--bg-color03);
+  color: var(--f-color01);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+/* 모달 상세보기 */
+#recruiterModal .recruiter_top.view {
+  position: relative;
+  height:100px;
+  border-bottom: 3px solid #000;
+}
+#recruiterModal > .recuiter_wrap.view {
+  top: 100px;
+}
+#recruiterModal > .recuiter_wrap.view .recruiter_table {
+  width: 100%; max-width: 800px;
+  margin: 30px auto;
+}
+#recruiterModal > .recuiter_wrap.view .recruiter_table > tbody {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+#recruiterModal > .recuiter_wrap.view .recruiter_table > tbody > tr {
+  display: flex;
+  justify-content: space-between; align-items: center;
+  flex-wrap: wrap;
+}
+#recruiterModal > .recuiter_wrap.view .recruiter_table > tbody > tr > th {font-size: 1.25rem;}
+#recruiterModal > .recuiter_wrap.view .recruiter_table > tbody > tr > td input,
+#recruiterModal > .recuiter_wrap.view .recruiter_table > tbody > tr > td .file_doc_label,
+#recruiterModal > .recuiter_wrap.view .recruiter_table > tbody > tr > td pre {
+  font-family: 'NanumBarunGothic', 'NanumSquare', '맑은고딕', arial, sans-serif;
+  font-size: var(--f-size02);
+  width: 650px; min-height: 50px;
+  padding: 5px;
+  border: 1px solid #000;
+  border-color: transparent transparent #000 transparent;
+  outline: none;
+}
+#recruiterModal > .recuiter_wrap.view .recruiter_table > tbody > tr > td textarea {
+  height: 200px;
+  resize: none;
+}
+#recruiterModal > .recuiter_wrap.view .recruiter_table > tbody > tr > td input[type=file] {display: none;}
+#recruiterModal > .recuiter_wrap.view .recruiter_table > tbody > tr > td .file_doc_label {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
