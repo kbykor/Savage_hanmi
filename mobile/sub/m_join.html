@@ -21,12 +21,17 @@
 
 </head>
 <body>
+
+
   <main id="join">
     <div class="title_box">
       <h2>회원가입</h2>
     </div>
 
     <!-- 이용약관 동의 -->
+    <form name="" method="post" action="" id="form">
+      <fieldset>
+        <legend>정보 입력</legend>    
     <div class="join_agree">
       <div class="join_agree_title">
         <p class="agree_title">이용약관 동의</p>
@@ -112,8 +117,7 @@
 이 약관은 2012년 8월 13일부터 시행합니다.</textarea>
         </div>
         <p class="check">
-          <input type="radio" name="use_agree01" id="use_agree01" value="Y" required>
-          <label for="use_agree01">동의합니다.</label>
+          <label for="use_agree01" class="use_agree"><input type="radio" name="use_agree01" id="use_agree01" value="Y" required>동의합니다.</label>
         </p>
       </div>
 
@@ -211,8 +215,7 @@
 현 개인정보처리방침 내용 추가, 삭제 및 수정이 있을 시에는 홈페이지의 ‘공지사항’을 통해 사전 고지할 것입니다.</textarea>
         </div>
         <p class="check">
-          <input type="radio" name="use_agree02" id="use_agree02" value="Y" required>
-          <label for="use_agree02">동의합니다.</label>
+          <label for="use_agree02" class="use_agree"><input type="radio" name="use_agree02" id="use_agree02" value="Y" required>동의합니다.</label>
         </p>
       </div>
     </div>
@@ -222,9 +225,9 @@
       <div class="user_data_title">
         <p class="agree_title">정보 입력</p>
       </div>
-      <form name="" method="post" action="" id="form">
+      <!-- <form name="" method="post" action="" id="form">
         <fieldset>
-          <legend>정보 입력</legend>          
+          <legend>정보 입력</legend>           -->
           <div class="data_email">
             <label for="data_email">이메일 <span class="red">*</span></label>
             <input type="text" name="data_email" id="data_email" placeholder="이메일을 입력해 주세요" required> @
@@ -272,20 +275,20 @@
             <label for="data_email_agree">이메일 수신여부</label>
             <p>한미약품 관련 정보에 대한 이메일 수신에 동의하십니까?</p>
             <p class="email_check">
-              <input type="radio" name="data_email_agree" id="data_email_agree" value="Y">
-              <label for="data_email_agree" class="data_email_agree">동의합니다.</label>
+              <label for="data_email_agree" class="data_email_agree"><input type="radio" name="data_email_agree" id="data_email_agree" value="Y">동의합니다.</label>
             </p>
           </div>
 
           <div class="box_commit">
             <input type="submit" class="btn_submit" value="회원가입">
             <button type="button" value="돌아가기" onclick="location.href='../index.html'">돌아가기</button>
-          </div> 
+          </div>          
+
+
         </fieldset>
       </form>
-    </div>
-    
+    </div>    
   </main>
-
+ 
 </body>
 </html>

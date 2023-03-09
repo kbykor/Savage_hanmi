@@ -122,11 +122,11 @@ form legend{
   display: none;
 }
 
-form div{
+form div:not(.agree_tab){
   margin: 50px auto;
 }
 
-form div label:not(.data_email_agree){
+form div label:not(.data_email_agree, .use_agree){
   display: block;
   font-size: var(--f-size02);
   margin-bottom: 10px;
@@ -139,7 +139,7 @@ form div input{
   color: #b9b6b6;
 }
 
-form div input:not(#data_email, #data_email02, #data_email_agree){
+form div input:not(#use_agree01, #use_agree02, #data_email, #data_email02, #data_email_agree){
   width: 500px;
 }
 
