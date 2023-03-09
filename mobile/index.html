@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- css파일 -->
+  <link rel="stylesheet" href="./skin/reset.css">
+  <link rel="stylesheet" href="./skin/main/style.css">
+  <link rel="stylesheet" href="./skin/base.css">
+  <!-- 폰트어썸 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  <!-- css3추가속성시 접두사 자동으로 붙여주는 스크립트 -->
+  <script src="./script/prefixfree.min.js"></script>
+  <!-- 제이쿼리 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <!-- 제이쿼리 ui -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <!-- 메인스크립트 -->
+  <script src="./skin/main/main.js"></script>
+</head>
+<body>
+  <main>
+    <!-- 1sec_슬라이드 -->
+    <section class="m_slide">
+      <h2>메인슬라이드</h2>
+      <ul class="ms_box">
+        <li>
+          <span>
+            <h3>R&D No.1</h3>
+            <p>한미약품은 매년 지속적인 R&D 투자를 통해<br>비만당뇨, 항암, 면역질환, 희귀질환 분야의<br> 글로벌 혁신신약 개발에 매진하고 있습니다. </p>
+          </span>
+          <img src="./images/main_slide01.jpg" alt="슬라이드1">
+        </li>
+        <li>
+          <span>
+            <span class="ms_subtitle">인류 건강증진에 노력하는</span>
+            <h3>건강한 기업</h3>
+            <p>한미약품은 인류 건강증진에 기여하고 건강한 사회적 기업으로 성장하기 위해 최선을 다하고 있습니다.</p>
+          </span>
+          <img src="./images/main_slide01.jpg" alt="슬라이드1">
+        </li>
+        <li>
+          <span>
+            <h3>창조와 혁신, 도전</h3>
+            <p>남들과 똑같은 길을 걷지 않고, 창조와 도전 정신으로 혁신하는' 글로벌 제약기업으로 도약하겠습니다.</p>
+          </span>
+          <img src="./images/main_slide01.jpg" alt="슬라이드1">
+        </li>
+      </ul>
+
+      <div class="ms_gauge"></div>
+      <div class="ms_arrow"></div>
+      <div class="ms_btn">
+        <span class="ms_on">&nbsp;</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+        <i class="fas fa-pause"></i>
+      <!-- <ul>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li><i class="fas fa-pause"></i></li> -->
+      </ul>
+      </div>
+      <ul class="ms_search">
+        <li>
+          <i class="fas fa-pills"></i>
+          <a href="#">
+            <span class="m_color01">제품</span>을 검색해 보세요
+            <i class="fas fa-magnifying-glass"></i>
+          </a>
+
+        </li>
+        <li>
+          <i class="fas fa-store"></i>
+          <a href="#" title="판매약국검색" id="map_search">
+          <span class="m_color01">판매약국</span>을 검색해 보세요
+          <i class="fas fa-magnifying-glass"></i>
+          </a>
+        </li>
+      </ul>
+      <p class="ms_scroll"><img src="./images/main_scroll.png" alt="스크롤"></p>
+    </section>
+
+    <!-- 2sec 제품소개 -->
+    <section class="m_product">
+      <h2>한미제품</h2>
+      <hr>
+      <article>
+      <div class="p_box">
+      <ul class="p_slide">
+        <li>
+          <div class="ps_wrap">
+            <a href="">
+            <div>
+              <img src="./images/main_product01.png" alt="">
+            </div>
+            <div>
+              <p class="p_badge">일반의약품</p>
+              <div class="p_info">
+                <h3>텐텐</h3>
+              <hr>
+              <p>비타민 A, C, D 등의 보급<br>
+                발육기, 병중·병후, 육체피로<br>
+                눈의 건조함의 완화, 야맹증</p>
+              </div>
+            </div>
+          </a>
+          </div>
+        </li>
+      
+        <li>
+          <div class="ps_wrap">
+            <a href="">
+              <div>
+                <img src="./images/main_product01.png" alt="">
+              </div>
+              <div>
+                <p class="p_badge">일반의약품</p>
+                <div class="p_info">
+                  <h3>텐텐</h3>
+                <hr>
+                <p>비타민 A, C, D 등의 보급<br>
+                  발육기, 병중·병후, 육체피로<br>
+                  눈의 건조함의 완화, 야맹증</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <div class="ps_wrap">
+            <a href="">
+            <div>
+              <img src="./images/main_product01.png" alt="">
+            </div>
+            <div>
+              <p class="p_badge">일반의약품</p>
+              <div class="p_info">
+                <h3>텐텐</h3>
+              <hr>
+              <p>비타민 A, C, D 등의 보급<br>
+                발육기, 병중·병후, 육체피로<br>
+                눈의 건조함의 완화, 야맹증</p>
+              </div>
+            </div>
+          </a>
+          </div>
+        </li>
+
+        <li>
+          <div class="ps_wrap">
+            <a href="">
+            <div>
+              <img src="./images/main_product01.png" alt="">
+            </div>
+            <div>
+              <p class="p_badge">일반의약품</p>
+              <div class="p_info">
+                <h3>텐텐</h3>
+              <hr>
+              <p>비타민 A, C, D 등의 보급<br>
+                발육기, 병중·병후, 육체피로<br>
+                눈의 건조함의 완화, 야맹증</p>
+              </div>
+            </div>
+          </a>
+          </div>
+        </li>
+
+        <li>
+          <div class="ps_wrap">
+            <a href="">
+            <div>
+              <img src="./images/main_product01.png" alt="">
+            </div>
+            <div>
+              <p class="p_badge">일반의약품</p>
+              <div class="p_info">
+                <h3>텐텐</h3>
+              <hr>
+              <p>비타민 A, C, D 등의 보급<br>
+                발육기, 병중·병후, 육체피로<br>
+                눈의 건조함의 완화, 야맹증</p>
+              </div>
+            </div>
+          </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+      <span class="p_lbtn">&nbsp;</span>
+      <span class="p_rbtn">&nbsp;</span>
+      </article>
+    </section>
+
+    <!-- 3sec 소개 -->
+    <section class="m_intro">
+
+      <h2>한미소개</h2>
+      <hr>
+      <p class="m_txt01">한미약품은 <span class="m_color01">창조</span>와 <span class="m_color01">도전</span>을 가치로<br> 
+        신약개발에 매진하는 <span class="m_color01">R&D중심</span> 제약기업입니다.</p>
+      <p class="m_txt02">한미약품은 제약산업의 생명인 R&D에 집중함으로써<br>신약 파이프라인을 최대한 확보해 세계 무대에서 통하는<br>글로벌 신약의 탄생 가능성을 높여 나가겠습니다.</p>
+
+      <ul class="mi_wrap">
+        <li>
+          <i class="fa-brands fa-fort-awesome"></i>
+          <p>연혁</p>
+          <p><span class="mi_size01">50</span>년</p>
+          <p>Since 1973</p>
+        </li>
+        <li>
+          <i class="fa-solid fa-award"></i>
+          <p>원외처방</p>
+          <p><span class="mi_size01">1</span>위</p>
+          <p>5년연속</p>
+        </li>
+        <li>
+          <i class="fa-solid fa-atom"></i>
+          <p>R&D투자금</p>
+          <p><span class="mi_size01">1000</span>억</p>
+          <p>업계최초</p>
+        </li>
+        <li>
+          <i class="fa-solid fa-book-bookmark"></i>
+          <p>제품</p>
+          <p><span class="mi_size01">251</span>개</p>
+          <p>&nbsp;</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 4sec 한미의 미래 -->
+    <section class="m_future">
+      <h2>한미의 미래</h2>
+      <hr>
+      <p class="m_txt01"><span class="m_color01">창조와 도전</span>으로 글로벌 기업 도약<br>
+        세계가 인정하는 <span class="m_color01">복합신약 명가</span></p>
+      <p class="m_txt02">1973년 창사아래 50 년간의 제약산업의 경험을 바탕으로 연구개발을 활발하게 전개하고 있습니다.<br>
+        다가오는 21세기 제약산업의 선두주자로 거듭나기 위해 한미약품은 최선을 다하고 있습니다.</p>
+
+        <article class="mf_wrap">
+          <div>
+            <a href="#" title="New Drug Development">
+              <div class="mf_circle">
+                <img src="./images/main_4sec_icon01.png" alt="New Drug Development">
+              </div>
+              <p class="mf_txt01">New Drug Development</p>
+            </a>
+          </div>
+          <div>
+            <a href="#" title="R&D Open Innovation">
+              <div class="mf_circle">
+                <img src="./images/main_4sec_icon02.png" alt="R&D Open Innovation">
+              </div>
+              <p class="mf_txt01">R&D Open Innovation</p>
+            </a>
+          </div>
+          <div>
+            <a href="#" title="ESG 경영">
+            <div class="mf_circle">
+              <img src="./images/main_4sec_icon03.png" alt="ESG 경영">
+            </div>
+            <p class="mf_txt01">ESG 경영</p>
+            </a>
+          </div>
+        </article>
+    </section>
+
+    <!-- 5sec 투자정보 -->
+    <section class="m_investment">
+      <h2>투자정보</h2>
+      <hr>
+      <p class="miv_txt01"><strong>인류건강과 행복실현</strong>이라는<br>
+        변하지 않는 가치를 위해 원칙을 지킵니다.</p>
+
+      <article class="miv_wrap">
+        <h3>실시간 주가정보</h3>
+        <div class="miv_box">
+          <table>
+          <tr>
+            <th colspan="2">실시간 주가 정보 <a href="#" title="주가정보 더보기">더보기 +</a></th>
+          </tr>
+          <tr>
+            <td>&#9650; 400,000</td>
+            <td>전일대비<br>265,500</td>
+          </tr>
+          </table>
+        </div>
+        <div class="m_news">
+        <h3>News</h3>
+        <a href="#" title="한미소식 더보기">더보기 +</a>
+        <hr>
+        <ul>
+          <li>
+            <a href="#" title="뉴스1">
+              <span>한미약품, 5년 연속 원외처방 1위</span>
+              <span>02-03</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" title="뉴스2">
+              <span>JVM, 창사 이래 최대 年매출 1419억원 달성</span>
+              <span>01-27</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" title="뉴스3">
+              <span>“아모잘탄패밀리·클로잘탄정·로수젯정, 심혈관질환 예방 통합관리에 효과적”</span>
+              <span>01-19</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" title="뉴스4">
+              <span>“한미약품 로수젯, 심혈관 질환 있는 ‘당뇨병 환자’ LDL-C 관리에 탁월”</span>
+              <span>01-17</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" title="뉴스5">	
+              <span>한미약품그룹 ‘새로운 50년, Global 한미!’ 기치로 새해 힘찬 출발</span>
+              <span>01-02</span>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+      <div class="m_ir">
+        <h3>IR</h3>
+        <a href="#" title="IR 더보기">더보기 +</a>
+        <hr>
+        <ul>
+          <li>
+            <a href="#" title="IR">
+              <span>2023년 1분기 기업설명회</span>
+              <span>02-10</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="IR">
+              <span>2022년 4분기 실적발표</span>
+              <span>02-08</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="IR">
+              <span>2022년 4분기 기업설명회</span>
+              <span>11-03</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="IR">
+              <span>2022년 3분기 실적발표</span>
+              <span>11-01</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="IR">
+              <span>2022년 2분기 실적발표</span>
+              <span>07-19</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </article>
+    </section>
+  </main>
+</body>
+</html>
