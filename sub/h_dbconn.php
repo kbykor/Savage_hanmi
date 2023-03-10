@@ -3,9 +3,9 @@
 
 //변수
 $mysql_host = 'localhost';
-$mysql_user = 'origin';
-$mysql_password='kbkwgod0113!';
-$mysql_db='origin';
+$mysql_user = 'hanmi2023';
+$mysql_password='servage!hanmi1';
+$mysql_db='hanmi2023';
 
 //데이터베이스에 연결하는 변수
 $conn = mysqli_connect($mysql_host, $mysql_user, $mysql_password, $mysql_db);

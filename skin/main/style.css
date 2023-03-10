@@ -1,6 +1,26 @@
 /* 공통 */
-.m_color01{
+.m_color00{
+  color: var(--main-color);
+}
+.m_color01, .m_color02{
+  position: relative;
   color:var(--main-color);
+  opacity: 0;
+}
+.m_color01.active, .m_color02.active{
+  animation: fadein2 3s;
+  animation-fill-mode: both;
+}
+@keyframes fadein2{
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
 }
 .m_txt01{
   margin: 50px 0px 15px 80px;
@@ -229,11 +249,11 @@ overflow: hidden;
 }
 
 /* 백그라운드 이미지 돌아가기 */
-.t_img {animation: rotate_image 20s linear infinite;transform-origin: 50% 50%;}
+.t_img {animation: rotate_image 55s linear infinite;transform-origin: 50% 50%;}
 
 @keyframes rotate_image{
     100% {
-        transform: rotate(360deg);
+        transform: rotate(-360deg);
     }
 }
 
@@ -497,9 +517,18 @@ i.fa-book-bookmark{
 .mf_circle{
   width:200px;
   height:200px;
+  display: flex;
+  justify-content: center; align-items: center;
   background: var(--main-color);
-  border-radius: 50%;
+  border-radius: 100%;
   position: relative;
+
+}
+.mf_circle:hover, .mf_circle:hover img{
+  animation: cir_dot infinite 3s linear;
+}
+.mf_circle:hover img{
+  animation-direction: reverse;
 }
 
 .mf_wrap > div:nth-of-type(2) > .mf_circle{
@@ -513,19 +542,21 @@ i.fa-book-bookmark{
   content:"";
   display: block;
   background: none;
-  border-radius: 50%;
+  border-radius: 100%;
   border: 3px solid #fff;
   position: absolute;
   left:10px;
   top:20px;
 }
 
+@keyframes cir_dot {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
 .mf_circle img{
   width:120px;
   height:120px;
-  position: absolute;
-  left:50%; top:50%;
-  transform: translate(-50%, -50%);
 }
 
 .mf_txt01{
