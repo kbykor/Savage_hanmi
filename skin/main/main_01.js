@@ -72,14 +72,13 @@ $(function(){
     });
 
     // 1sec 메인슬라이드
-  
-  let n = $('.ms_btn').index();
+    let n =  0;
+    console.log(n);
+
   $('.ms_box > li > span').css('opacity','1');
   $('.ms_box > li:first-of-type > span').addClass('ms_fadein');
 
-
-  function autoslide(){
-    $('.ms_btn > span').click(function(){
+  $('.ms_btn > span').click(function(){
     n = $(this).index();
     console.log(n);
 
@@ -94,17 +93,52 @@ $(function(){
     $('.ms_btn > span').removeClass('ms_on');
     $(this).addClass('ms_on');
 
+    if(n==0){
+      $('.ms_box > li > span').css('opacity','0');
+      $('.ms_box > li:first-of-type > span').addClass('ms_fadein').parent().siblings().find('span').removeClass('ms_fadein');
+    }else if(n==1){
+      $('.ms_box > li > span').css('opacity','0');
+      $('.ms_box > li:nth-of-type(2) > span').addClass('ms_fadein').parent().siblings().find('span').removeClass('ms_fadein');
+  
+    }else{
+      $('.ms_box > li > span').css('opacity','0');
+      $('.ms_box > li:last-of-type > span').addClass('ms_fadein').parent().siblings().find('span').removeClass('ms_fadein');
+    }
+});
+
+  function autoslide(n){
+    n = -(n*$('.ms_box > li img').width());
+    $('.ms_box > li').animate({'left':n},500);
+    console.log(n);
+    n = 0;
+    console.log(n);
+    if(n==0){
+      $('.ms_box > li > span').css('opacity','0');
+      $('.ms_box > li:first-of-type > span').addClass('ms_fadein').parent().siblings().find('span').removeClass('ms_fadein');
+
+    }else if(n==1){
+      $('.ms_box > li > span').css('opacity','0');
+      $('.ms_box > li:nth-of-type(2) > span').addClass('ms_fadein').parent().siblings().find('span').removeClass('ms_fadein');
+  
+    }else{
+      $('.ms_box > li > span').css('opacity','0');
+      $('.ms_box > li:last-of-type > span').addClass('ms_fadein').parent().siblings().find('span').removeClass('ms_fadein');
+    }
+  }
+
+  let Timer = setInterval(function(){
     if(n==2){
       n=0;
     }else{
       n++;
     }
+    autoslide(n);
+  },3000);
+
+
+});
 
 
 
-  });
-}
 
-let Timer = setInterval(autoslide, 1000);
 
-  });
