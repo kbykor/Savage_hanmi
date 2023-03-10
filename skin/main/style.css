@@ -55,9 +55,25 @@ section > hr{
 .ms_box > li > span{
   position: absolute;
   left: 100px;
-  top: 350px;
+  top: 340px;
   z-index: 1;
 }
+
+.ms_fadein{
+  animation: fadein 2s;
+  animation-fill-mode: both;
+}
+@keyframes fadein{
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .ms_box > li:nth-child(2) > span{
   top: 265px;
 }

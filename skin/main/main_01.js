@@ -74,21 +74,37 @@ $(function(){
     // 1sec 메인슬라이드
   
   let n = $('.ms_btn').index();
+  $('.ms_box > li > span').css('opacity','1');
+  $('.ms_box > li:first-of-type > span').addClass('ms_fadein');
 
 
-  $('.ms_btn span').click(function(){
+  function autoslide(){
+    $('.ms_btn > span').click(function(){
     n = $(this).index();
     console.log(n);
 
+    // 슬라이드 이미지 너비 구함
     let img_w = $('.ms_box > li img').width()*n;
     console.log(img_w);
 
+    // 슬라이드 이미지 이동
     $('.ms_box > li').animate({'left':-img_w},500);
 
+    // 슬라이드 버튼 이동
     $('.ms_btn > span').removeClass('ms_on');
     $(this).addClass('ms_on');
 
-    $('.ms_box > li ')
-  });
+    if(n==2){
+      n=0;
+    }else{
+      n++;
+    }
 
-});
+
+
+  });
+}
+
+let Timer = setInterval(autoslide, 1000);
+
+  });
