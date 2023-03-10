@@ -129,6 +129,8 @@ section > hr{
   transform: rotate(125deg) translate(-117.5px,-141.3px);
 }
 
+
+
 /* 슬라이드 버튼 */
 .ms_btn{
   position: absolute;
@@ -421,6 +423,7 @@ transform:translate(-20px,-470px);
 .mi_wrap > li{
   text-align: center;
   color:#fff;
+  width:25%;
 }
 
 .mi_wrap > li > i{
@@ -433,7 +436,7 @@ transform:translate(-20px,-470px);
   margin-bottom:50px
 }
 .mi_wrap > li > p:nth-of-type(2){
-  font-size: 48px;
+  font-size: 32px;
   margin-bottom: 50px;
   font-weight: bold;
 }
