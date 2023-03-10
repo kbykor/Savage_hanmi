@@ -6,8 +6,9 @@
     max-width: 1024px;
     background-color: #fff;
     position: relative;
+    padding-bottom: 100px;
   }
-  hr{
+  footer hr{
     margin: 0px;
   }
   .view_pc{
