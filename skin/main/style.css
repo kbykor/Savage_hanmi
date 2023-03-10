@@ -210,6 +210,15 @@ overflow: hidden;
   margin: 0px auto;
 }
 
+/* 백그라운드 이미지 돌아가기 */
+.t_img {animation: rotate_image 20s linear infinite;transform-origin: 50% 50%;}
+
+@keyframes rotate_image{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .ps_wrap{
 
 }
