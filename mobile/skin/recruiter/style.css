@@ -202,15 +202,15 @@
   gap: 24px;
 }
 #recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr {
-  display: flex;
+  display: grid;
   justify-content: space-between; align-items: center;
-  flex-wrap: wrap;
+  grid-template-columns: 30% minmax(300px, 650px);
 }
-#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > th {font-size: 1.25rem;}
+#recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > th {font-size: 1.25rem;text-align: left;}
 #recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > td input,
 #recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > td .file_doc_label,
 #recruiterModal > .recuiter_wrap.write .recruiter_table > tbody > tr > td textarea {
-  width: 650px; min-height: 50px;
+  width: 100%; min-height: 50px;
   padding: 5px;
   border: 1px solid #000;
 }
