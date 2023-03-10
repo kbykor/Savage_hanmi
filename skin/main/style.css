@@ -1,4 +1,7 @@
 /* 공통 */
+.m_color00{
+  color: var(--main-color);
+}
 .m_color01, .m_color02{
   position: relative;
   color:var(--main-color);
