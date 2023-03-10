@@ -87,7 +87,7 @@ section > hr{
 .ms_gauge{
   position: absolute;
   width: 1920px;
-  height: 1px;
+  height: 1.5px;
   left: 0px;
   top: 440px;
   background: #fff;
@@ -96,12 +96,20 @@ section > hr{
 .ms_arrow{
   position: absolute;
   width: 192px;
-  height: 1px;
+  height: 1.5px;
   left: 0px;
   top: 440px;
   background: var(--main-color);
 }
 
+.ms_arrow::after{
+  display: block;
+  content:"";
+  width:1.5px;
+  height:20px;
+  background: var(--main-color);
+  transform: rotate(125deg) translate(-117.5px,-141.3px);
+}
 
 /* 슬라이드 버튼 */
 .ms_btn{
@@ -286,7 +294,7 @@ transform:translate(-20px,-470px);
 }
 
 .p_lbtn{
-  left:200px;
+  left:150px;
 }
 
 .p_lbtn::after{
@@ -316,7 +324,7 @@ transform:translate(-20px,-470px);
 }
 
 .p_rbtn{
-  right:200px;
+  right:150px;
 }
 
 .p_bgimg {
@@ -328,6 +336,22 @@ transform:translate(-20px,-470px);
 .p_bgimg > img {
   width: 1500px;
   height: 1500px;
+}
+
+.p_page{
+  position: absolute;
+  font-size: var(--f-size06);
+  margin:0px auto;
+  font-weight:bold;
+  z-index: 5;
+  bottom:150px;
+  right:25%;
+}
+
+.pg_border01{
+  color:#fff;
+  -webkit-text-stroke:1px #333;
+  font-weight: bold;
 }
 
 /* 3sec 한미소개 */

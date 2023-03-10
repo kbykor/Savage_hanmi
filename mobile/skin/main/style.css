@@ -456,6 +456,14 @@ i.fa-book-bookmark{
   padding-bottom: 50px;
 }
 
+.mf_wrap > div:nth-child(2) .mf_circle{
+  transform: translateY(-150px);
+}
+
+.mf_wrap > div:nth-child(2) .mf_txt01{
+  transform: translateY(180px);
+}
+
 .mf_circle{
   width:125px;
   height:125px;
@@ -521,10 +529,10 @@ i.fa-book-bookmark{
 }
 
 .miv_txt01{
-  margin: 50px 0px 15px 20px;
+  margin: 20px 0px 15px 20px;
   color:#333;
   font-size: var(--f-size02);
-  line-height: 30px;
+  line-height: 25px;
 }
 
 .miv_box{
@@ -1017,7 +1025,7 @@ transform:translate(-10px,-223px);
 }
 
 .mi_wrap{
-  width:80%;
+  width:90%;
   display: flex;
   justify-content: space-around;
   position: absolute;
@@ -1029,6 +1037,14 @@ transform:translate(-10px,-223px);
   text-align: center;
   color:#fff;
 }
+
+/* .mi_wrap > li::after{
+  display: block;
+  content:"";
+  width:1px;
+  height:200px;
+  background: #fff;
+} */
 
 .mi_wrap > li > i{
   font-size: 40px;
