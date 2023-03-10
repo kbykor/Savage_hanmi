@@ -395,6 +395,7 @@ transform:translate(-20px,-470px);
 .mi_wrap > li{
   text-align: center;
   color:#fff;
+  width:25%;
 }
 
 .mi_wrap > li > i{
