@@ -6,8 +6,9 @@
     max-width: 1024px;
     background-color: #fff;
     position: relative;
+    padding-bottom: 100px;
   }
-  hr{
+  footer hr{
     margin: 0px;
   }
   .view_pc{
@@ -101,12 +102,50 @@
     font-size: var(--f-size01);
     font-weight: bold;
   }
-  #han_fam option{
+  .fam_box{
+    position: relative;
     text-align: center;
+    width: 100%;
+    line-height: 30px;
   }
-  #han_fam option[value="한미사이언스"]{
-    background-image: url(../images/aff01.png);
+  .fam_box p{
+    display: block;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    font-weight: bold;
   }
+  .fam_box p::after{
+    content: '\f0d7';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-left: 10px;
+  }
+  .fam_select{
+    position: relative;
+    border-bottom: 1px solid#ccc;
+    padding: 10px 0px;
+  }
+  .fam_option a img{
+    width: 110px; height: 15px;
+    vertical-align: middle;
+  }
+  .fam_option:first-child a img{
+    width: 130px;
+    vertical-align: baseline;
+  }
+  .fam_option:nth-child(3) a img{
+    width: 70px;
+  }
+  .fam_option:nth-child(4) a img{
+    width: 30px;
+    vertical-align: baseline;
+  }
+  .fam_option:last-child a img{
+    width: 40px;
+    vertical-align: middle;
+  }
+
   .f_address{
     width: 100%;
     margin: 0px auto;
