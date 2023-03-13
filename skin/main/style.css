@@ -717,7 +717,7 @@ i.fa-book-bookmark{
 }
 
 .m_news, .m_ir{
-  width:470px;
+  width:25%;
   padding:0px 10px;
   transform: translateY(-50px);
 }
@@ -757,7 +757,7 @@ i.fa-book-bookmark{
   white-space:nowrap;
   overflow:hidden;
   display: block;
-  width:350px;
+  width:70%;
 }
 
 .miv_wrap ul>li > a > span > span{
