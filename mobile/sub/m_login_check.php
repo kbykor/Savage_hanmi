@@ -1,6 +1,6 @@
 <?php
   //db연결
-  include("./h_dbconn.php"); //DB 연결을 위한 같은 경로의 db_conn.php를 인클루드한다
+  include("./m_dbconn.php"); //DB 연결을 위한 같은 경로의 db_conn.php를 인클루드한다
 
   header("Content-Type: text/html; charset=UTF-8"); //한글 깨짐 방지
 
@@ -12,7 +12,7 @@
   //메시지 보내기
   if(!$mb_id||!$mb_password){ //둘 중 하나라도 만족하지 않는다면
     echo "<script>alert('회원 아이디나 비밀번호가 공백이면 안 됩니다');</script>";
-    echo "<script>location.replace('./h_login.php');</script>";
+    echo "<script>location.replace('./m_login.php');</script>";
     exit;
   }
 
@@ -30,7 +30,7 @@
 
   if(!$mb['data_email'] || !($password === $mb['data_pw'])) {
     echo "<script>alert('가입된 회원 아이디가 아니거나 비밀번호가 틀립니다. \\n비밀번호는 대소문자를 구분합니다.');</script>";
-    echo "<script>location.replace('./h_login.php');</script>";
+    echo "<script>location.replace('./m_login.php');</script>";
     exit;
   }
 
