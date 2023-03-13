@@ -1,6 +1,8 @@
 /* 공통 */
 .m_color00{
   color: var(--main-color);
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 .m_color01, .m_color02{
   position: relative;
@@ -8,17 +10,17 @@
   opacity: 0;
 }
 .m_color01.active, .m_color02.active{
-  animation: fadein2 3s;
+  animation: fadein2 2s;
   animation-fill-mode: both;
 }
 @keyframes fadein2{
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(0%);
   }
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(100%);
   }
 
 }
@@ -216,6 +218,18 @@ section > hr{
 .ms_scroll{
   text-align: center;
   transform: translateY(-130px);
+  animation: move-up-down 1s ease-in-out infinite;
+}
+@keyframes move-up-down{
+  0%{
+    transform: translateY(-130px);
+  }
+  50%{
+    transform: translateY(-138px);
+  }
+  100%{
+    transform: translateY(-130px);
+  }
 }
 
 .ms_scroll > img{
@@ -232,6 +246,15 @@ overflow: hidden;
 
 .m_product > h2{
   color:#333;
+}
+
+/* 백그라운드 이미지 돌아가기 */
+.t_img {animation: rotate_image 20s linear infinite;transform-origin: 50% 50%;}
+
+@keyframes rotate_image{
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* 제품 슬라이드 */
