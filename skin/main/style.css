@@ -248,6 +248,15 @@ overflow: hidden;
   color:#333;
 }
 
+/* 백그라운드 이미지 돌아가기 */
+.t_img {animation: rotate_image 20s linear infinite;transform-origin: 50% 50%;}
+
+@keyframes rotate_image{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* 제품 슬라이드 */
 
 .m_product{
