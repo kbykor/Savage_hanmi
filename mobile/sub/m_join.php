@@ -1,42 +1,42 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>한미약품_회원가입</title>
+<?php
+  include('./m_dbconn.php'); //데이터베이스에 접근 하기 위한 내용
 
+  if(isset($_SESSION['ss_mb_id'])&&$_GET['mode']=='modify'){//세션이 있고 회원 수정 mode라면 회원정보 가져옴
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="../skin/reset.css" type="text/css">
-  <link rel="stylesheet" href="../skin/base.css" type="text/css">
-  <link rel="stylesheet" href="../skin/common.css" type="text/css">
-  <link rel="stylesheet" href="../skin/member/m_join.css" type="text/css">
+  }else{
+    $mb = [
+      'data_email' => '',
+      'data_pw' => '',
+      'data_pw02' => '',
+      'data_name' => '',
+      'data_birth' => '',
+      'data_phone' => '',
+      'data_email_agree' => ''
+    ];
+    $mode ="insert";
+    $title ="회원가입";
+    $modify_mb_info ='';
+  }
 
-  <!-- 폰트어썸 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  include_once($_SERVER['DOCUMENT_ROOT'].'/header.php');
+?>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="../skin/member/m_join.js" defer></script>
-
-</head>
-<body>
-
-
+  <!-- 회원가입 main -->
   <main id="join">
     <div class="title_box">
       <h2>회원가입</h2>
     </div>
 
     <!-- 이용약관 동의 -->
-    <form name="" method="post" action="" id="form">
+    <form name="hanmi_join" method="post" action="./m_join_update.php" id="form" onsubmit="return fregisterform_submit(this);">
+      <input type="hidden" name="mode" value="<?php echo $mode ?>">
       <fieldset>
         <legend>정보 입력</legend>    
-    <div class="join_agree">
-      <div class="join_agree_title">
-        <p class="agree_title">이용약관 동의</p>
-        <p class="agree_red">* 필수 입력 칸입니다</p>
-      </div>
+        <div class="join_agree">
+          <div class="join_agree_title">
+            <p class="agree_title">이용약관 동의</p>
+            <p class="agree_red">* 필수 입력 칸입니다</p>
+          </div>
 
       <!-- 이용 약관 01-->
       <div class="join_agree01">
@@ -117,7 +117,7 @@
 이 약관은 2012년 8월 13일부터 시행합니다.</textarea>
         </div>
         <p class="check">
-          <label for="use_agree01" class="use_agree"><input type="radio" name="use_agree01" id="use_agree01" value="Y" required>동의합니다.</label>
+          <label for="use_agree01" class="use_agree"><input type="checkbox" name="use_agree01" id="use_agree01" value="Y" required>동의합니다.</label>
         </p>
       </div>
 
@@ -215,7 +215,7 @@
 현 개인정보처리방침 내용 추가, 삭제 및 수정이 있을 시에는 홈페이지의 ‘공지사항’을 통해 사전 고지할 것입니다.</textarea>
         </div>
         <p class="check">
-          <label for="use_agree02" class="use_agree"><input type="radio" name="use_agree02" id="use_agree02" value="Y" required>동의합니다.</label>
+          <label for="use_agree02" class="use_agree"><input type="checkbox" name="use_agree02" id="use_agree02" value="Y" required>동의합니다.</label>
         </p>
       </div>
     </div>
@@ -225,13 +225,10 @@
       <div class="user_data_title">
         <p class="agree_title">정보 입력</p>
       </div>
-      <!-- <form name="" method="post" action="" id="form">
-        <fieldset>
-          <legend>정보 입력</legend>           -->
           <div class="data_email">
             <label for="data_email">이메일 <span class="red">*</span></label>
-            <input type="text" name="data_email" id="data_email" placeholder="이메일을 입력해 주세요" required> @
-            <input type="text" name="data_email02" id="data_email02" placeholder="직접 입력">
+            <input type="text" name="data_email" id="data_email" placeholder="이메일을 입력해 주세요" value="<?php echo $mb['data_email'] ?>" <?php echo $modify_mb_info ?> required> @
+            <input type="text" name="data_email02" id="data_email02" placeholder="직접 입력" value="<?php echo $mb['data_email02'] ?>">
             <select name="mail_select" id="mail_select">
               <option value="직접 입력">직접 입력</option>
               <option value="naver.com">naver.com</option>
@@ -258,37 +255,90 @@
 
           <div class="data_name">
             <label for="data_name">이름 <span class="red">*</span></label>
-            <input type="text" name="data_name" id="data_name" placeholder="이름을 입력해 주세요" required>
+            <input type="text" name="data_name" id="data_name" placeholder="이름을 입력해 주세요" value="<?php echo $mb['data_name'] ?>" <?php echo $modify_mb_info ?> required>
           </div>
 
           <div class="data_birth">
             <label for="data_birth">생년월일 <span class="red">*</span></label>
-            <input type="date" name="data_birth" id="data_birth" placeholder="YYMMDD" required maxlength="6">
+            <input type="date" name="data_birth" id="data_birth" placeholder="YYMMDD" required maxlength="6" value="<?php echo $mb['data_birth'] ?>" <?php echo $modify_mb_info ?> >
           </div>
 
           <div class="data_phone">
             <label for="data_phone">휴대폰 번호 <span class="red">*</span></label>
-            <input type="text" name="data_phone" id="data_phone" placeholder="010-0000-0000" required maxlength="11">
+            <input type="text" name="data_phone" id="data_phone" placeholder="-(하이픈) 제외 숫자 11자리 입력" required maxlength="11" value="<?php echo $mb['data_phone'] ?>">
           </div>
 
           <div class="data_email_agree">
             <label for="data_email_agree">이메일 수신여부</label>
             <p>한미약품 관련 정보에 대한 이메일 수신에 동의하십니까?</p>
             <p class="email_check">
-              <label for="data_email_agree" class="data_email_agree"><input type="radio" name="data_email_agree" id="data_email_agree" value="Y">동의합니다.</label>
+              <label for="data_email_agree" class="data_email_agree"><input type="checkbox" name="data_email_agree" id="data_email_agree" value="Y" <?php echo $mb['data_email_agree'] ?> >동의합니다.</label>
             </p>
           </div>
 
           <div class="box_commit">
             <input type="submit" class="btn_submit" value="회원가입">
-            <button type="button" value="돌아가기" onclick="location.href='../index.html'">돌아가기</button>
-          </div>          
+            <button type="button" value="돌아가기" onclick="location.href='../index.php'">돌아가기</button>
+          </div>   
 
-
+        </div>
         </fieldset>
       </form>
-    </div>    
   </main>
  
-</body>
-</html>
+
+  <script>
+      function fregisterform_submit(f) { // submit 최종 폼체크
+
+        if (f.mb_id.value.length < 1) { // 회원아이디 검사
+          alert("이메일을 입력하십시오.");
+          f.mb_id.focus();
+          return false;
+        }
+
+        if (f.mb_password.value.length < 3) {
+          alert("비밀번호를 3글자 이상 입력하십시오.");
+          f.mb_password.focus();
+          return false;
+        }
+
+        if (f.mb_password.value != f.mb_password_re.value) {
+          alert("비밀번호가 같지 않습니다.");
+          f.mb_password_re.focus();
+          return false;
+        }
+
+        if (f.mb_password.value.length > 0) {
+          if (f.mb_password_re.value.length < 3) {
+            alert("비밀번호를 3글자 이상 입력하십시오.");
+            f.mb_password_re.focus();
+            return false;
+          }
+        }
+
+        if (f.mb_name.value.length < 1) { // 이름 검사
+          alert("이름을 입력하십시오.");
+          f.mb_name.focus();
+          return false;
+        }
+
+        if (f.mb_birth.value.length < 1) { // 생년월일 검사
+          alert("이름을 입력하십시오.");
+          f.mb_birth.focus();
+          return false;
+        }
+
+        if (f.mb_phone.value.length < 1) { // 전화번호 검사
+          alert("전화번호를 입력하십시오.");
+          f.mb_phone.focus();
+          return false;
+        }
+        
+        // location.replace('./join_suc.html');
+
+        // return true;
+
+      }
+    </script>
+  
+  <?php include_once($_SERVER['DOCUMENT_ROOT'].'/footer_m.php'); ?>

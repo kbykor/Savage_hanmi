@@ -21,7 +21,7 @@
         </p>
 
         <ul class="ul_login">
-          <li><a href="./h_join.php" title="회원가입">회원가입</a></li>
+          <li><a href="./m_join.php" title="회원가입">회원가입</a></li>
           <li><a href="#" title="아이디찾기">아이디찾기</a></li>
           <li><a href="#" title="비밀번호찾기">비밀번호찾기</a></li>
         </ul>
@@ -39,7 +39,7 @@
         </div>
       </fieldset>
     </form>
-
+  </main>
   <?php } else { //로그인 세션이 있을 경우 로그인 완료 화면 ?>
     <?php
       $mb_id = $_SESSION['ss_mb_id'];
@@ -50,9 +50,8 @@
 
       mysqli_close($conn); //데이터 접속 종료
 
-      echo "<script>location.replace('../index.html');</script>";
+      echo "<script>location.replace('../index.php');</script>";
     ?>
   <?php } ?>
   </main>
-  
-  <?php include_once($_SERVER['DOCUMENT_ROOT'].'/footer.php'); ?>
+  <?php include_once($_SERVER['DOCUMENT_ROOT'].'/footer_m.php'); ?>
