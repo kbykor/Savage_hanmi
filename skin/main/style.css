@@ -71,6 +71,7 @@ section > hr{
 .ms_box > li img{
   width:1920px;
   filter: brightness(50%);
+  /* object-fit: cover; */
 }
 
 /* 슬라이드 글씨 */
@@ -315,11 +316,17 @@ display: flex;
 }
 .p_slide > div > .ps_wrap > a > div:first-child::after{
   display : block;
-content:"";
-width:500px;
-height:500px;
-border:3px solid rgb(253, 213, 213);
-transform:translate(-20px,-470px);
+  content:"";
+  width:500px;
+  height:500px;
+  border:3px solid rgb(253, 213, 213);
+  transform:translate(-20px,-470px);
+}
+.p_slide > div > .ps_wrap > a > div:first-child > .img_wrap {
+  width:100%; max-width: 500px;
+  height: 100%; max-height: 450px;
+  display: flex;
+  justify-content: center; align-items: center;
 }
 
 .p_slide > div > .ps_wrap > a > div:last-child{
@@ -342,22 +349,34 @@ transform:translate(-20px,-470px);
   text-align: left;
   position: absolute;
   right: 40px;
-  top:40%;
+  top:30%;
+  font-size: 14px;
 }
 
 .p_info > p{
   line-height: 24px;
+  padding: 5px 0px;
+}
+.p_info > h3{
+  font-size: var(--f-size02);
 }
 
-.p_badge{
+.p_badge01, .p_badge02, .p_badge03{
   position:absolute;
   top:10px;
   right:30px;
   background: var(--main-color);
-  padding:8px 5px;
+  padding:8px 15px;
   border-radius: 5px;
   color:#fff;
   line-height: 16px;
+}
+
+.p_badge02{
+  background: #1056E5;
+}
+.p_badge03{
+  background: var(--bg-color03);
 }
 
 /* 버튼 */
@@ -368,6 +387,7 @@ transform:translate(-20px,-470px);
   border-radius: 50%;
   position:absolute;
   top:calc(50%);
+  cursor: pointer;
 }
 
 .p_lbtn{
@@ -422,7 +442,7 @@ transform:translate(-20px,-470px);
   text-align: right;
   font-size: var(--f-size06);
   margin:0px auto;
-  font-weight:bold;
+  /* font-weight:bold; */
   z-index: 5;
   bottom:150px;
   right:25%;
@@ -430,7 +450,7 @@ transform:translate(-20px,-470px);
 
 .swiper-pagination-current{
   color:#fff;
-  -webkit-text-stroke:1px #333;
+  -webkit-text-stroke:0.5px #333;
   font-weight: bold;
 }
 
