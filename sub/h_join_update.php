@@ -78,7 +78,7 @@
   if($mode == "insert") { //신규 등록 상태
 
     //회원가입을 시도하는 아이디가 사용 중
-    $sql = "SELECT * FROM h_member WHERE data_email = '$mb_id'";
+    $sql = "SELECT * FROM member WHERE data_email = '$mb_id'";
 
     $result = mysqli_query($conn, $sql); //결과값 다시 저장
 
@@ -89,7 +89,7 @@
     }
 
     //최종 검사 결과가 끝났으니 데이터베이스에 자료를 하나씩 입력한다
-    $sql = "insert into h_member
+    $sql = "insert into member
     set
     data_email = '$mb_id',
     data_pw = '$mb_password',
@@ -102,7 +102,7 @@
     $result = mysqli_query($conn, $sql); //입력 실행
 
   }else if($mode=="modify"){ 
-    $sql = "update h_member
+    $sql = "update member
     set
     data_email = '$mb_id',
     data_pw = '$mb_password',

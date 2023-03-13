@@ -1,26 +1,6 @@
 <?php
-  include('./h_dbconn.php'); //DB 연결을 위한 같은 경로의 dbconn.php를 인클루드한다 (=import)
+  include_once($_SERVER['DOCUMENT_ROOT'].'/header.php');
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>한미약품_로그인</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="../skin/reset.css" type="text/css">
-  <link rel="stylesheet" href="../skin/base.css" type="text/css">
-  <link rel="stylesheet" href="../skin/common.css" type="text/css">
-  <link rel="stylesheet" href="./css/login.css" type="text/css">
-  
-</head>
-<body>
-  <!-- 헤더 삽입 -->
-  <?php include_once('header.php'); ?>
-
   <!-- 로그인 main -->
   <?php if(!isset($_SESSION['ss_mb_id'])){ //로그인 세션이 없을 경우 로그인 화면 ?>
   <!-- 로그인 html -->
@@ -64,7 +44,7 @@
     <?php
       $mb_id = $_SESSION['ss_mb_id'];
 
-      $sql = "select * from h_member where data_email = TRIM('$mb_id')"; //데이터 조회
+      $sql = "select * from member where data_email = TRIM('$mb_id')"; //데이터 조회
       $result = mysqli_query($conn, $sql); //조회한 결과 변수에 담기
       $mb = mysqli_fetch_assoc($result); //회원 정보를 반복문을 통해 변수에 담기
 
@@ -74,8 +54,4 @@
     ?>
   <?php } ?>
   </main>
-
-  <!-- 푸터 삽입 -->
-  <?php include_once('footer.php'); ?>
-</body>
-</html>
+  <?php include_once($_SERVER['DOCUMENT_ROOT'].'/footer.php'); ?>
