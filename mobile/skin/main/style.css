@@ -1,4 +1,43 @@
-@media screen and (min-width:375px) and (max-width:768px){
+.p_badge01, .p_badge02{
+  position:absolute;
+  top:10px;
+  right:10px;
+  padding:5px 5px;
+  border-radius: 5px;
+  color:#fff;
+  line-height: 16px;
+  font-size: var(--f-size01);
+}
+.p_badge01 {background: var(--main-color);}
+.p_badge02 {background: rgb(34, 135, 250);}
+
+.m_color00{
+  color: var(--main-color);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.m_color01, .m_color02{
+  position: relative;
+  color:var(--main-color);
+  opacity: 0;
+}
+.m_color01.active, .m_color02.active{
+  animation: fadein2 2s;
+  animation-fill-mode: both;
+}
+@keyframes fadein2{
+  0% {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(100%);
+  }
+
+}
+
+@media screen and (max-width:768px){
 
 .m_color01{
   color:var(--main-color);
@@ -25,6 +64,22 @@ section > h2{
 section > hr{
   margin:0px 20px;
   border: 3px solid #333;
+}
+
+.m_color01.active, .m_color02.active{
+  animation: fadein2 2s;
+  animation-fill-mode: both;
+}
+@keyframes fadein2{
+  0% {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(100%);
+  }
+
 }
 
 /* -----------------메인슬라이드----------------------------- */
@@ -60,9 +115,24 @@ section > hr{
   position: absolute;
   left: 15px;
   top: 40%;
-
   z-index: 1;
 }
+
+.ms_fadein{
+  animation: fadein 2s;
+  animation-fill-mode: both;
+}
+@keyframes fadein{
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .ms_box > li:nth-child(2) > span{
   top: 37%;
 }
@@ -101,12 +171,22 @@ section > hr{
 
 .ms_arrow{
   position: absolute;
-  width: 20%;
-  height: 1px;
+  width: 100px;
+  height: 1.5px;
   left: 0px;
   top: 46%;
   background: var(--main-color);
 }
+
+.ms_arrow::after{
+  display: block;
+  content:"";
+  width:1.5px;
+  height:10px;
+  background: var(--main-color);
+  transform:rotate(125deg) translate(-61.8px,-76.3px);
+}
+
 
 /* 슬라이드 버튼 */
 .ms_btn{
@@ -123,13 +203,15 @@ section > hr{
   border-radius: 50%;
   margin:0px 5px;
   display: inline-block;
+  cursor: pointer;
 }
 
-.ms_btn > i.fas{
-  margin:0px 5px;
-  font-size: 24px;
-  transform: translateY(5px);
+i.fa-pause{
   color:#fff;
+  bottom :100px;
+  position: absolute;
+  right:40%;
+  font-size: 20px;
 }
 
 .ms_on{
@@ -173,10 +255,13 @@ section > hr{
   color:#333;
 }
 
+/*  */
+
 /* 제품슬라이드 */
 .m_product{
   position: relative;
   height:600px;
+  overflow: hidden;
 }
 
 .m_product > article {
@@ -185,10 +270,13 @@ section > hr{
   /* overflow: hidden; */
   text-align: center;
   margin: 0px auto;
+  overflow: hidden;
 }
 
-.ps_wrap{
-
+.swiper{
+  width: 344px;
+  height:600px;
+  margin: 0 auto;
 }
 
 .p_slide{
@@ -199,37 +287,44 @@ display: flex;
 
 }
 
-.p_slide > li{
+.p_slide > div{
   width:100%;
   justify-content: center;
 }
 
-.p_slide > li > .ps_wrap{
+.p_slide > div > .ps_wrap{
   position: relative;
   margin: 0px auto;
   width:320px;
   /* transform: translateX(15%); */
+  margin-left: 20px;
 }
 .p_slide > li > div{
 }
 
-.p_slide > li > .ps_wrap > a > div:first-child{
+.p_slide > div > .ps_wrap > a > div:first-child{
   width:190px; height:230px;
   background: var(--main-color);
   position:absolute;
   top:10px; left:10px;
   z-index: 2;
 }
-.p_slide > li > .ps_wrap > a > div:first-child::after{
+.p_slide > div > .ps_wrap > a > div:first-child::after{
   display : block;
 content:"";
 width:190px;
 height:230px;
 border:3px solid rgb(253, 213, 213);
-transform:translate(-10px,-212px);
+transform : translate(-10px,-240px);
 }
 
-.p_slide > li > .ps_wrap > a > div:last-child{
+.img_wrap {
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: center; align-items: center;
+}
+
+.p_slide > div > .ps_wrap > a > div:last-child{
   width:270px; height:240px;
   background: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
@@ -239,8 +334,12 @@ transform:translate(-10px,-212px);
   z-index: 1;
 }
 
-.p_slide > li > .ps_wrap > a > div > img{
+.p_slide > div > .ps_wrap img{
   width:100%;
+}
+
+.m_product .swiper-creative .swiper-slide {
+  overflow: visible;
 }
 
 .p_info{
@@ -259,18 +358,6 @@ transform:translate(-10px,-212px);
 .p_info > p{
   font-size:var(--f-size01);
   line-height: 16px;
-}
-
-.p_badge{
-  position:absolute;
-  top:10px;
-  right:10px;
-  background: var(--main-color);
-  padding:5px 5px;
-  border-radius: 5px;
-  color:#fff;
-  line-height: 16px;
-  font-size: var(--f-size01);
 }
 
 /* 버튼 */
@@ -317,19 +404,22 @@ transform:translate(-10px,-212px);
   right:10%;
 }
 
-.p_page{
+.m_product .p_page{
   position: absolute;
-  bottom:9%;
-  font-size: var(--f-size05);
+  left: 50%;
+  bottom: 9%;
+  font-size: var(--f-size03);
   margin:0px auto;
   font-weight:bold;
   transform: translateX(-50%);
+  z-index: -1;
 }
 
-.pg_border01{
+.swiper-pagination-current{
   color:#fff;
   -webkit-text-stroke:0.5px #333;
   font-weight: bold;
+  font-size: var(--f-size05);
 }
 
 /* 3sec 한미소개 */
@@ -667,6 +757,79 @@ i.fa-book-bookmark{
   z-index: 1001;
   margin:0px auto;
 }
+
+.m_map > h3{
+  padding: 20px 20px;
+  font-size: var(--f-size02);
+}
+
+.m_map > hr{
+  margin:0px 20px;
+}
+
+.m_map >form{
+  padding: 20px 20px;
+}
+
+#daumRoughmapContainer1678675643784{
+  margin: 20px auto;
+}
+
+.modal_search{
+  padding-bottom: 20px;
+}
+
+.modal_search > #p_search{
+  width: 86%;
+  height: 40px;
+  border:none;
+  border-bottom:1px solid #333;
+}
+
+.modal_search > i.fas{
+  position : absolute;
+  top:85px;
+  right:50px;
+}
+
+.modal_area > select{
+  height: 40px;
+  border:none;
+  border-bottom:1px solid #333;
+}
+
+.modal_area > select:first-of-type{
+  width:22%;
+  margin-right: 10px;
+}
+.modal_area > select:nth-of-type(2){
+  width:39%;
+  margin-right: 10px;
+}
+
+.modal_area > input[type="submit"]{
+  width:120px;
+  height:40px;
+  border:none;
+  background: #000;
+  color:#fff;
+  text-align: left;
+  text-indent:15px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.modal_area > i.fas{
+  position : absolute;
+  top:157px;
+  right:50px;
+  color:#fff;
+}
+
+.modal_area > input[type="submit"]:hover{
+  background: var(--main-color);
+  color: #fff;
+}
 }
 
 
@@ -764,6 +927,21 @@ section > hr{
   /* letter-spacing: 1.5px; */
 }
 
+.ms_fadein{
+  animation: fadein 2s;
+  animation-fill-mode: both;
+}
+@keyframes fadein{
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* 슬라이드 게이지바 */
 .ms_gauge{
   position: absolute;
@@ -783,12 +961,20 @@ section > hr{
   background: var(--main-color);
 }
 
+.ms_arrow::after{
+  display: block;
+  content:"";
+  width:1.5px;
+  height:20px;
+  background: var(--main-color);
+  transform: rotate(125deg) translate(-117.5px,-141.3px);
+}
 
 /* 슬라이드 버튼 */
 .ms_btn{
   position: absolute;
-  top: 480px;
-  right:120px;
+  bottom: 100px;
+  left:50%;
 }
 
 .ms_btn > span{
@@ -800,11 +986,20 @@ section > hr{
   display: inline-block;
 }
 
-.ms_btn > i.fas{
-  margin:0px 5px;
-  font-size: 24px;
-  transform: translateY(5px);
+i.fa-pause{
   color:#fff;
+  bottom :100px;
+  position: absolute;
+  right:38%;
+  font-size: 20px;
+}
+
+i.fa-play{
+  color:#fff;
+  bottom :100px;
+  position: absolute;
+  right:38%;
+  font-size: 20px;
 }
 
 .ms_on{
@@ -864,8 +1059,19 @@ position: relative;
   margin: 0px auto;
 }
 
-.ps_wrap{
+.img_wrap {
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: center; align-items: center;
+}
+.img_wrap > img {
+  width: 100%;
+}
 
+
+.m_product_slider {
+  width: 600px;
+  height: 600px;
 }
 
 .p_slide{
@@ -876,36 +1082,36 @@ display: flex;
 
 }
 
-.p_slide > li{
+.p_slide > div{
   width:100%;
   justify-content: center;
 }
 
-.p_slide > li > .ps_wrap{
+.p_slide > div > .ps_wrap{
   position: relative;
   width:400px;
   margin: 0px auto;
 }
-.p_slide > li > div{
+.p_slide > div > div{
 }
 
-.p_slide > li > .ps_wrap > a > div:first-child{
+.p_slide > div > .ps_wrap > a > div:first-child{
   width:200px; height:250px;
   background: var(--main-color);
   position:absolute;
   top:10px; left:10px;
   z-index: 2;
 }
-.p_slide > li > .ps_wrap > a > div:first-child::after{
+.p_slide > div > .ps_wrap > a > div:first-child::after{
   display : block;
 content:"";
 width:200px;
 height:250px;
 border:3px solid rgb(253, 213, 213);
-transform:translate(-10px,-223px);
+transform:translate(-10px,-260px);
 }
 
-.p_slide > li > .ps_wrap > a > div:last-child{
+.p_slide > div > .ps_wrap > a > div:last-child{
   width:350px; height:250px;
   background: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
@@ -915,7 +1121,7 @@ transform:translate(-10px,-223px);
   z-index: 1;
 }
 
-.p_slide > li > .ps_wrap > a > div > img{
+.p_slide > div > .ps_wrap > a > div > img{
   width:100%;
 }
 
@@ -952,6 +1158,7 @@ transform:translate(-10px,-223px);
   border-radius: 50%;
   position:absolute;
   top:45%;
+  cursor: pointer;
 }
 
 .p_lbtn{
@@ -988,20 +1195,23 @@ transform:translate(-10px,-223px);
   right:80px;
 }
 
-.p_page{
+.m_product .p_page{
   position: absolute;
-  font-size: var(--f-size05);
+  font-size: var(--f-size03);
   margin:0px auto;
   font-weight:bold;
   z-index: 5;
   bottom:30%;
   right:20%;
+  width: auto;
+  text-align: right;
 }
 
-.pg_border01{
+.swiper-pagination-current{
   color:#fff;
-  -webkit-text-stroke:1px #333;
+  -webkit-text-stroke:0.5px #333;
   font-weight: bold;
+  font-size: var(--f-size05);
 }
 
 
@@ -1089,7 +1299,7 @@ i.fa-book-bookmark{
 /* 4sec 한미의 미래 */
 
 .m_future{
-  height:1200px;
+  height:900px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../images/main_4sec.jpg);
   margin:0px 0px;
   background-repeat: no-repeat;
@@ -1112,7 +1322,7 @@ i.fa-book-bookmark{
   position: relative;
   margin:0px auto;
   justify-content: space-around;
-  top:200px;
+  top:80px;
 }
 
 .mf_circle{
