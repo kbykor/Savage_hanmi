@@ -17,33 +17,10 @@
     $title ="회원가입";
     $modify_mb_info ='';
   }
+
+  include_once($_SERVER['DOCUMENT_ROOT'].'/header.php');
 ?>
 
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>한미약품_회원가입</title>
-
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="../skin/reset.css" type="text/css">
-  <link rel="stylesheet" href="../skin/base.css" type="text/css">
-  <link rel="stylesheet" href="../skin/common.css" type="text/css">
-  <link rel="stylesheet" href="./css/join.css" type="text/css">
-
-  <!-- 폰트어썸 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="./css/join.js" defer></script>
-
-</head>
-<body>
-  <!-- 헤더 삽입 -->
-  <?php include_once('header.php'); ?>
 
   <!-- 회원가입 main -->
   <main id="join">
@@ -140,7 +117,7 @@
     이 약관은 2012년 8월 13일부터 시행합니다.</textarea>
             </div>
             <p class="check">
-              <label for="use_agree01" class="use_agree"><input type="radio" name="use_agree01" id="use_agree01" value="Y" required>동의합니다.</label>
+              <label for="use_agree01" class="use_agree"><input type="checkbox" name="use_agree01" id="use_agree01" value="Y" required>동의합니다.</label>
             </p>
           </div>
 
@@ -238,7 +215,7 @@
     현 개인정보처리방침 내용 추가, 삭제 및 수정이 있을 시에는 홈페이지의 ‘공지사항’을 통해 사전 고지할 것입니다.</textarea>
             </div>
             <p class="check">
-              <label for="use_agree02" class="use_agree"><input type="radio" name="use_agree02" id="use_agree02" value="Y" required>동의합니다.</label>
+              <label for="use_agree02" class="use_agree"><input type="checkbox" name="use_agree02" id="use_agree02" value="Y" required>동의합니다.</label>
             </p>
           </div>
         </div>
@@ -289,14 +266,14 @@
 
                 <div class="data_phone">
                 <label for="data_phone">휴대폰 번호 <span class="red">*</span></label>
-                <input type="text" name="data_phone" id="data_phone" placeholder="010-0000-0000" required maxlength="11" value="<?php echo $mb['data_phone'] ?>">
+                <input type="text" name="data_phone" id="data_phone" placeholder="-(하이픈) 제외 숫자 11자리 입력" required maxlength="11" value="<?php echo $mb['data_phone'] ?>">
               </div>
 
               <div class="data_email_agree">
                 <label for="data_email_agree">이메일 수신여부</label>
                 <p>한미약품 관련 정보에 대한 이메일 수신에 동의하십니까?</p>
                 <p class="email_check">
-                  <label for="data_email_agree" class="data_email_agree"><input type="radio" name="data_email_agree" id="data_email_agree" value="Y" <?php echo $mb['data_email_agree'] ?>>동의합니다.</label>
+                  <label for="data_email_agree" class="data_email_agree"><input type="checkbox" name="data_email_agree" id="data_email_agree" value="Y" <?php echo $mb['data_email_agree'] ?>>동의합니다.</label>
                 </p>
               </div>
 
@@ -308,10 +285,6 @@
       </fieldset>
     </form>
   </main>
-
-  <!-- 푸터 삽입 -->
-  <?php include_once('footer.php'); ?>
-
 
   <script>
       function fregisterform_submit(f) { // submit 최종 폼체크
@@ -367,5 +340,4 @@
       }
     </script>
   
-</body>
-</html>
+  <?php include_once($_SERVER['DOCUMENT_ROOT'].'/footer.php'); ?>
