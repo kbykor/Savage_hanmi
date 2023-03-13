@@ -131,7 +131,7 @@ $(function(){
   });
 
   function move_a(){
-    $('.ms_arrow').animate({'left':$('.ms_box > li').width() - 207 + 'px'},5000);
+    $('.ms_arrow').animate({'left':$('.ms_box > li').width() - $('.ms_arrow').width() + 'px'},5000);
   }
   function return_a(){
     $('.ms_arrow').stop().css('left','0px');
@@ -180,6 +180,7 @@ $(function(){
 
   $('.ms_btn > span').hover(function(){
     clearInterval(Timer);
+    return_a();
   },function(){
     Timer = setInterval(function(){
       if(n==2){
@@ -189,7 +190,98 @@ $(function(){
       }
       autoslide(n);
     },5000);
+    move_a();
     });
+
+    let ms_i = $('i.fa-pause');
+  $('i.fa-pause').click(function(){
+
+    if(ms_i!==0){
+      clearInterval(Timer);
+      return_a();
+      $(this).removeClass('fa-pause');
+      $(this).addClass('fa-play');
+      ms_i = 0; 
+    }else{      
+      $(this).removeClass('fa-play');
+      $(this).addClass('fa-pause');
+      Timer = setInterval(function(){
+        if(n==2){
+          n=0;
+        }else{
+          n++;
+        }
+        autoslide(n);
+      },5000);
+      move_a();
+      ms_i=1;
+    }
+    console.log(ms_i);
+  });
+
+
+
+
+      //////////스크롤 위치에 맞춰 등장이벤트//////////
+  $(window).scroll(function(){
+    let spos01 = $(this).scrollTop();
+    if(spos01 >= 1250){
+      $('.m_color01').addClass('active');
+    }
+    if(spos01 >= 2350){
+      $('.m_color02').addClass('active');
+    }
+  });
+
+
+// 3sec 한미소개 카운트
+
+  let onoff = false; // 실행 여부 확인 변수
+
+  $(window).scroll(function(){
+
+    let spos02 = $(this).scrollTop();
+
+    if(spos02>=900&&spos02<=2000&&onoff==false){
+      onoff = true;
+      // 카운트를 표시할 요소
+      const $counter = document.querySelector(".count1");
+
+      // 목표수치
+      const max = 50;
+
+      counter($counter, max);
+
+      function counter($counter, max) {
+        let now = max;
+
+        const handle = setInterval(() => {
+          $counter.innerHTML = Math.ceil(max - now);
+        
+          // 목표에 도달하면 정지
+          if (now < 1) {
+            clearInterval(handle);
+          }
+        
+          // 적용될 수치, 점점 줄어듬
+          const step = now / 10;
+
+          now -= step;
+        }, 50);
+      }
+
+      const maxArr = [50, 1, 1000, 251];
+
+      for(let i = 0; i < maxArr.length; i++) {
+        if(i == 1){
+          setTimeout(() => counter(document.querySelector('.count'+(i+1)), maxArr[i]), 3000);
+        } else {
+          counter(document.querySelector('.count'+(i+1)), maxArr[i]);
+        }
+      }
+
+    }
+  });
 
 
   });
