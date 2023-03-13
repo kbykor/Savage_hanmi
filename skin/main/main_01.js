@@ -114,21 +114,27 @@ $(function(){
     if(n==0){
       $('.ms_box > li > span').css('opacity','0');
       $('.ms_box > li:first-of-type > span').addClass('ms_fadein').parent().siblings().find('span').removeClass('ms_fadein');
+      return_a();
+      move_a();
     }else if(n==1){
       $('.ms_box > li > span').css('opacity','0');
       $('.ms_box > li:nth-of-type(2) > span').addClass('ms_fadein').parent().siblings().find('span').removeClass('ms_fadein');
+      return_a();
+      move_a();
   
     }else{
       $('.ms_box > li > span').css('opacity','0');
       $('.ms_box > li:last-of-type > span').addClass('ms_fadein').parent().siblings().find('span').removeClass('ms_fadein');
+      return_a();
+      move_a();
     }
   });
 
   function move_a(){
-    $('.ms_arrow').animate({'left':$('.ms_box > li').width() - 207 + 'px'},4800);
+    $('.ms_arrow').animate({'left':$('.ms_box > li').width() - 207 + 'px'},5000);
   }
   function return_a(){
-    $('.ms_arrow').css('left','0px');
+    $('.ms_arrow').stop().css('left','0px');
   }
 
   // 3초마다 반복호출하여 슬라이드가 자동으로 움직이게 한다.
