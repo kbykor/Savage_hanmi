@@ -38,18 +38,31 @@ $(function(){
     new daum.roughmap.Lander({
       "timestamp" : "1678675643784",
       "key" : "2e2gi",
-      "mapWidth" : "600",
+      "mapWidth" : "100%",
       "mapHeight" : "300"
     }).render();
   </script>`;
+  
+  $('body').append(modal);
 
     $('.ms_search > li:last-child').click(function(e){
       e.preventDefault();
-      $('body').append(modal);
+      $('.m_modal').css({'opacity':'1', 'visibility':'visible','z-index':'1000'});
       $('.m_close').click(function(){
-        $('.m_modal').fadeOut();
+        $('.m_modal').removeAttr('style');
       });
     });
+
+      
+    $('.ms_side > ul > li:nth-of-type(2)').click(function(e){
+      e.preventDefault();
+      $('.m_modal').css({'opacity':'1', 'visibility':'visible','z-index':'1000'});
+      $('.m_close').click(function(){
+        $('.m_modal').removeAttr('style');
+      });
+    });
+
+
 
     // 2sec 제품소개페이지
     
@@ -220,12 +233,15 @@ $(function(){
   });
 
 
-  // $(window).scroll(function(){
-  //   let spos03 = $(this).scrollTop();
-  //   if(spos03>=){
-
-  //   }
-  // });
+  $(window).scroll(function(){
+    let spos03 = $(this).scrollTop();
+    console.log(spos03);
+    if(spos03>=700){
+      $('.ms_side').fadeIn();
+    }else{
+      $('.ms_side').fadeOut();
+    }
+  });
 
 
       //////////스크롤 위치에 맞춰 등장이벤트//////////
@@ -290,9 +306,4 @@ $(function(){
   });
 
 
-  });
-
-
-
-
-
+});
