@@ -220,6 +220,12 @@ $(function(){
   });
 
 
+  // $(window).scroll(function(){
+  //   let spos03 = $(this).scrollTop();
+  //   if(spos03>=){
+
+  //   }
+  // });
 
 
       //////////스크롤 위치에 맞춰 등장이벤트//////////

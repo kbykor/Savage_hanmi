@@ -196,9 +196,11 @@ i.fa-play{
   margin: 0px auto;
   text-align: center;
   background: rgba(255,255,255,.5);
-  transform: translateY(-150px);
+  transform: translateX(-50%);
   border-radius: 30px;
   filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.25));
+  position: absolute;
+  left:50%; bottom:100px;
 }
 
 .ms_search > li{
@@ -226,18 +228,21 @@ i.fa-play{
 
 .ms_scroll{
   text-align: center;
-  transform: translateY(-130px);
+  position: absolute;
+  bottom: 10px;
+  left:50%;
+  transform: translateX(-50%);
   animation: move-up-down 1s ease-in-out infinite;
 }
 @keyframes move-up-down{
   0%{
-    transform: translateY(-130px);
+    transform: translateY(0px);
   }
   50%{
-    transform: translateY(-138px);
+    transform: translateY(-8px);
   }
   100%{
-    transform: translateY(-130px);
+    transform: translateY(0px);
   }
 }
 
@@ -448,7 +453,7 @@ transform: translate(-20px,-546px);
   position: absolute;
   width: auto;
   text-align: right;
-  font-size: var(--f-size06);
+  font-size: var(--f-size04);
   margin:0px auto;
   font-weight:bold;
   z-index: 5;
@@ -458,8 +463,9 @@ transform: translate(-20px,-546px);
 
 .swiper-pagination-current{
   color:#fff;
-  -webkit-text-stroke:1px #333;
+  -webkit-text-stroke:1px #000;
   font-weight: bold;
+  font-size : var(--f-size06);
 }
 
 /* 3sec 한미소개 */
