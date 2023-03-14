@@ -196,9 +196,11 @@ i.fa-play{
   margin: 0px auto;
   text-align: center;
   background: rgba(255,255,255,.5);
-  transform: translateY(-150px);
+  transform: translateX(-50%);
   border-radius: 30px;
   filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.25));
+  position: absolute;
+  left:50%; bottom:100px;
 }
 
 .ms_search > li{
@@ -226,24 +228,67 @@ i.fa-play{
 
 .ms_scroll{
   text-align: center;
-  transform: translateY(-130px);
+  position: absolute;
+  bottom: 10px;
+  left:50%;
+  transform: translateX(-50%);
   animation: move-up-down 1s ease-in-out infinite;
 }
 @keyframes move-up-down{
   0%{
-    transform: translateY(-130px);
+    transform: translateY(0px);
   }
   50%{
-    transform: translateY(-138px);
+    transform: translateY(-8px);
   }
   100%{
-    transform: translateY(-130px);
+    transform: translateY(0px);
   }
 }
 
 .ms_scroll > img{
   width:40px;
   height:50px;
+}
+
+.ms_side{
+  width:80px;
+  height:250px;
+  position: fixed;
+  right:50px;
+  top:50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  background: rgba(255,255,255,.5);
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: none;
+}
+
+.ms_side > ul{
+  text-align: center;
+}
+
+.ms_side > ul > li{
+  height:33.3%;
+  margin:20px 0px;
+}
+
+.ms_side > ul > li > a > i.fas, .ms_side > ul > li > a > i.fa-regular{
+  font-size: var(--f-size04);
+  margin-bottom: 10px;
+}
+
+.ms_side > ul > li > a > p{
+  font-size: 12px;
+}
+
+.ms_side > ul > li > a:hover{
+  transition: 0.3s;
+}
+
+.ms_side > ul > li > a:hover{
+  color:var(--main-color);
 }
 
 /* 2sec 제품소개 */
@@ -448,9 +493,8 @@ transform: translate(-20px,-546px);
   position: absolute;
   width: auto;
   text-align: right;
-  font-size: var(--f-size06);
+  font-size: var(--f-size04);
   margin:0px auto;
-  font-weight:bold;
   z-index: 5;
   bottom:150px;
   right:25%;
@@ -458,8 +502,9 @@ transform: translate(-20px,-546px);
 
 .swiper-pagination-current{
   color:#fff;
-  -webkit-text-stroke:1px #333;
+  -webkit-text-stroke:0.5px #000;
   font-weight: bold;
+  font-size : var(--f-size06);
 }
 
 /* 3sec 한미소개 */
@@ -482,7 +527,7 @@ transform: translate(-20px,-546px);
 }
 
 .mi_wrap{
-  width:1500px;
+  width:100%;
   display: flex;
   justify-content: space-around;
   position: absolute;
@@ -778,7 +823,10 @@ i.fa-book-bookmark{
   width:100%; height:100%;
   top:0px; left:0px;
   background : rgba(0,0,0,.8);
-  z-index: 1000;
+  z-index: -1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
 }
 
 .m_close{
