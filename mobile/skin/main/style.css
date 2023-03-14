@@ -1,4 +1,4 @@
-.p_badge01, .p_badge02{
+.p_badge01, .p_badge02, .p_badge03{
   position:absolute;
   top:10px;
   right:10px;
@@ -10,6 +10,7 @@
 }
 .p_badge01 {background: var(--main-color);}
 .p_badge02 {background: rgb(34, 135, 250);}
+.p_badge03 {background: var(--bg-color03);}
 
 .m_color00{
   color: var(--main-color);
@@ -343,12 +344,12 @@ transform : translate(-10px,-240px);
 }
 
 .p_info{
-  width:100px;
+  width: 150px;
   height: 150px;
   text-align: left;
   position: absolute;
-  right: 10px;
-  top:30%;
+  right: 20px;
+  top: 15%;
 }
 
 .p_info > h3{
@@ -1126,12 +1127,12 @@ transform:translate(-10px,-260px);
 }
 
 .p_info{
-  width:140px;
+  width: 150px;
   height: 150px;
   text-align: left;
   position: absolute;
   right: 20px;
-  top:30%;
+  top: 15%;
 }
 
 .p_info > p{
